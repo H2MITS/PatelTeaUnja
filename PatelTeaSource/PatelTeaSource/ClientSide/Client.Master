@@ -1,0 +1,290 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Client.master.cs" Inherits="PatelTeaSource.ClientSide.Client" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Patel Tea</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet"
+        href="http://fonts.googleapis.com/css?family=Playfair+Display:400,700" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'
+        rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="../Template/assets/css/animate.css" />
+    <link rel="stylesheet" href="../Template/assets/css/hover.css" />
+    <link rel="stylesheet" href="../Template/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Template/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../Template/assets/css/nivo-slider.css" />
+    <link rel="stylesheet" href="../Template/assets/css/flickity.min.css" />
+    <link rel="stylesheet" href="../Template/assets/css/main.css" />
+    <link rel="stylesheet" href="../Template/assets/css/responsive.css" />
+    <link rel="stylesheet" href="../Template/assets/css/color/default.css" />
+
+    <script src="../Template/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <!-- 
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "1e9facb6-9190-4d1f-aa7d-4db4b2f293c5", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="loadpage home style-v2">
+    <form id="form1" runat="server">
+    <div id="wrap">
+
+        <header class="header">
+            <div class="header-inner">
+                <div class="container">
+                    <!-- Logo -->
+                    <div id="logo" class="logo" style="max-width: 80px;">
+                        <a href="index.html">
+                            <img alt="The Retation" src="../Template/LOGOHindi.png" /></a>
+                    </div>
+
+                    <!-- Main Menu -->
+
+                    <nav id="primary-navigation" class="navbar" role="navigation">
+                        <div class="navbar-inner">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed"
+                                    data-toggle="collapse" data-target="#navbar">
+                                    <span class="sr-only">Toggle navigation</span> <span
+                                        class="icon-bar"></span><span class="icon-bar"></span><span
+                                            class="icon-bar"></span>
+                                </button>
+                                <h3 class="navbar-brand">Menu</h3>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="about.html">Products</a></li>
+                                    <li><a href="about.html">Quality</a></li>
+                                    <li><a href="about.html">Awards</a></li>
+                                    <%--<li><a href="menu.html">Menu</a>
+                                        <div class="mega-menu">
+                                            <div class="mega-menu-inner">
+                                                <div class="mega-cols">
+                                                    <ul class="sub-menu">
+                                                        <li><a href="menu.html#coffee">Coffee</a> </li>
+                                                        <li><a href="menu.html#milk">Milk</a> </li>
+                                                        <li><a href="menu.html#cocktail">Cocktail</a> </li>
+                                                        <li><a href="menu.html#beverages">Beverages</a> </li>
+                                                        <li><a href="menu.html#tea">Tea</a> </li>
+                                                        <li><a href="menu.html#cake">Cake</a> </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="mega-cols">
+                                                    <div class="mega-text">
+                                                        <figure>
+                                                            <img alt="" src="../Template/images/mega-menu/mega-menu.jpg" />
+                                                            <figcaption>Classical Latin literature from 45 BC, making...</figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="galleries-v1.html">Galleries</a>
+                                        <div class="dropdown">
+                                            <ul class="sub-menu">
+                                                <li><a href="galleries-v3.html">Galleries 2 Cols</a> </li>
+                                                <li><a href="galleries-v1.html">Galleries 3 Cols (Single Expanding)</a> </li>
+                                                <li><a href="galleries-v2.html">Galleries 4 Cols (Single Popup)</a> </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="blog-v1.html">News &amp; Events</a>
+                                        <div class="dropdown">
+                                            <ul class="sub-menu">
+                                                <li><a href="blog-v1.html">Blog standard</a> </li>
+                                                <li><a href="blog-v2.html">Blog Left Sidebar</a> </li>
+                                                <li><a href="blog-v3.html">Blog Right Sidebar</a>  </li>
+                                                <li><a href="post.html">Single</a> </li>
+                                            </ul>
+                                        </div>
+                                    </li>--%>
+                                    <li><a href="contact.html">Contacts</a></li>
+                                    <li><a href="about.html">Where to buy</a></li>
+                                </ul>
+                            </div>
+                            <!--/.navbar-collapse -->
+                        </div>
+                    </nav>
+
+                    <%-- <div class="header-right">
+                        <ul class="nav">
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                        </ul>
+                    </div>--%>
+                </div>
+
+            </div>
+
+            <!-- Banner -->
+            <div id="banner">
+                <div class="slider-wrapper">
+                    <div class="nivoSlider">
+                        <img src="../Template/images/slider-5.jpg" alt=""
+                            title="#nivoCaption-1" />
+
+                        <img
+                            src="../Template/images/SLIFER.jpeg" alt="" title="#nivoCaption-3" />
+                        <img src="../Template/images/slider-6.jpg"
+                            alt="" title="#nivoCaption-2" />
+                    </div>
+                    <div id="nivoCaption-1" class="nivo-html-caption">
+                        <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right">
+                            <h1 class="line-title title animated animation-delay-30"
+                                data-animate="fadeInUp">Advertising based<i class="fa">&#xf111;</i>
+                            </h1>
+                            <p class="desc animated animation-delay-50"
+                                data-animate="fadeInUp">
+                                Coffee culture is a great coffee
+								taste and it rests on the basis of responsible &amp; respectful
+                            </p>
+                        </div>
+                    </div>
+                    <div id="nivoCaption-3" class="nivo-html-caption">
+                        <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right;">
+                            <h1 class="line-title title animated animation-delay-30"
+                                data-animate="fadeInUp" style="color: black">Pack a big punch<i class="fa">&#xf111;</i>
+                            </h1>
+                            <p class="desc animated animation-delay-50"
+                                data-animate="fadeInUp" style="color: black">
+                                Grown traditionally, harvested
+								naturally and roasted lovingly, they're the star of every cup
+                            </p>
+                        </div>
+                    </div>
+                    <div id="nivoCaption-2" class="nivo-html-caption">
+                        <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right">
+                            <h1 class="line-title title animated animation-delay-30"
+                                data-animate="fadeInUp">Pack a big punch<i class="fa">&#xf111;</i>
+                            </h1>
+                            <p class="desc animated animation-delay-50"
+                                data-animate="fadeInUp">
+                                Grown traditionally, harvested
+								naturally and roasted lovingly, they're the star of every cup
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+
+        <div id="main-content" class="main-content">
+            
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            
+        </div>
+        <footer id="footer">
+            <div class="footer-info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <aside class="widget">
+                                <h3 class="title">About Us</h3>
+                                <div class="widget-content contact-us">
+                                    <p>
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high
+										life accusamus terry richardson ad squid.
+                                    </p>
+                                    <p><i class="fa">&#xf0e0;</i><span>hello@mtheme.org</span></p>
+                                    <p><i class="fa">&#xf095;</i><span>+(84)123456789</span></p>
+                                    <p>
+                                        <i class="fa">&#xf015;</i><span>198 West 21th Street, Suite 721 New York
+										NY 10010</span>
+                                    </p>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-sm-3">
+                            <aside class="widget">
+                                <h3 class="title">For Business</h3>
+                                <div class="widget-content">
+                                    <ul>
+                                        <li><a href="#">Office Coffee</a></li>
+                                        <li><a href="#">Food Service</a></li>
+                                        <li><a href="#">Affiliate Program</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-sm-3">
+                            <aside class="widget">
+                                <h3 class="title">Newsletter</h3>
+                                <div class="widget-content">
+                                    <p>
+                                        If you world like sign-up to the origin
+										newsletter,please enter your email address below
+                                    </p>
+                                    <form method="post" action="#">
+                                        <p>
+                                            <input type="text" value="" name="name" placeholder="Name"
+                                                required="required" class="name">
+                                        </p>
+                                        <p>
+                                            <input type="email" value="" name="email" placeholder="Email"
+                                                required="required" class="email">
+                                        </p>
+                                        <p>
+                                            <button class="hvr-shutter-out-horizontal">Subscribe</button>
+                                        </p>
+                                    </form>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-sm-3">
+                            <aside class="widget">
+                                <h3 class="title">Follow Us</h3>
+                                <div class="widget-content">
+                                    <p>Follow Origin on the following social network sites.</p>
+                                    <ul class="social">
+                                        <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf09a;</i></a></li>
+                                        <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf099;</i></a></li>
+                                        <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf0d5;</i></a></li>
+                                        <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf09e;</i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>
+                        Copyright &copy; 2015 <a href="http://themeforest.net/user/mtheme_market">mTheme</a>. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+    </form>
+
+    <script src="../Template/assets/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="../Template/assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="../Template/assets/js/vendor/flickity.pkgd.min.js"></script>
+    <script src="../Template/assets/js/vendor/jquery.waypoints.min.js"></script>
+    <script src="../Template/assets/js/vendor/sticky.min.js"></script>
+    <script src="../Template/assets/js/vendor/bootstrap.min.js"></script>
+    <script src="../Template/assets/js/vendor/jquery.nivo.slider.pack.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js"></script>-->
+
+    <script src="../Template/assets/js/main.js"></script>
+</body>
+</html>
