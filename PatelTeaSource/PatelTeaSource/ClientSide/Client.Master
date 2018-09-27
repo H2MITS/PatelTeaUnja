@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Patel Tea Packers</title>
 
+      
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" rel="stylesheet"
@@ -61,10 +62,10 @@
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
                                     <li class="active"><a href="Default.aspx">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="about.html">Products</a></li>
-                                    <li><a href="about.html">Quality</a></li>
-                                    <li><a href="about.html">Awards</a></li>
+                                    <li><a href="../CommingSoonTemp/index.html">About</a></li>
+                                    <li><a href="../CommingSoonTemp/index.html">Products</a></li>
+                                    <li><a href="../CommingSoonTemp/index.html">Quality</a></li>
+                                    <li><a href="../CommingSoonTemp/index.html">Awards</a></li>
                                     <%--<li><a href="menu.html">Menu</a>
                                         <div class="mega-menu">
                                             <div class="mega-menu-inner">
@@ -109,7 +110,7 @@
                                         </div>
                                     </li>--%>
                                     <li><a href="Contactus.aspx">Contacts Us</a></li>
-                                    <li><a href="about.html">Where to buy</a></li>
+                                    <li><a href="../CommingSoonTemp/index.html">Where to buy</a></li>
                                 </ul>
                             </div>
                             <!--/.navbar-collapse -->
