@@ -106,9 +106,9 @@
 					</div>
 				</div>
 				
-				<div class="maps">
-					<div id="map-canvas"></div>
-				</div>
+				
+					<div class="mapouter"><div class="gmap_canvas"><iframe width="1500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Patel%20Tea%20Packers%20Unava&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div><style>.mapouter{text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:498px;width:1339px;}</style></div> 
+				
 				
 			</div>
 
