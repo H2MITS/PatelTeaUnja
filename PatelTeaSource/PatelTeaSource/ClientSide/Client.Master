@@ -42,7 +42,7 @@
                     <!-- Logo -->
                     <div id="logo" class="logo" style="max-width: 80px;">
                         <a href="index.html">
-                            <img alt="The Retation" src="../Template/LOGOHindi.png" /></a>
+                            <img alt="The Retation" src="../Template/17.png" /></a>
                     </div>
 
                     <!-- Main Menu -->
@@ -108,7 +108,7 @@
                                             </ul>
                                         </div>
                                     </li>--%>
-                                    <li><a href="contact.html">Contacts</a></li>
+                                    <li><a href="Contactus.aspx">Contacts Us</a></li>
                                     <li><a href="about.html">Where to buy</a></li>
                                 </ul>
                             </div>
