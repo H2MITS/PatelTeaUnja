@@ -126,57 +126,12 @@
 
             </div>
 
-            <!-- Banner -->
-            <div id="banner">
-                <div class="slider-wrapper">
-                    <div class="nivoSlider">
-                        <img src="../Template/images/slider-5.jpg" alt=""
-                            title="#nivoCaption-1" />
-
-                        <img
-                            src="../Template/images/SLIFER.jpeg" alt="" title="#nivoCaption-3" />
-                        <img src="../Template/images/slider-6.jpg"
-                            alt="" title="#nivoCaption-2" />
-                    </div>
-                    <div id="nivoCaption-1" class="nivo-html-caption">
-                        <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right">
-                            <h1 class="line-title title animated animation-delay-30"
-                                data-animate="fadeInUp">Advertising based<i class="fa">&#xf111;</i>
-                            </h1>
-                            <p class="desc animated animation-delay-50"
-                                data-animate="fadeInUp">
-                                Coffee culture is a great coffee
-								taste and it rests on the basis of responsible &amp; respectful
-                            </p>
-                        </div>
-                    </div>
-                    <div id="nivoCaption-3" class="nivo-html-caption">
-                        <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right;">
-                            <h1 class="line-title title animated animation-delay-30"
-                                data-animate="fadeInUp" style="color: black">Pack a big punch<i class="fa">&#xf111;</i>
-                            </h1>
-                            <p class="desc animated animation-delay-50"
-                                data-animate="fadeInUp" style="color: black">
-                                Grown traditionally, harvested
-								naturally and roasted lovingly, they're the star of every cup
-                            </p>
-                        </div>
-                    </div>
-                    <div id="nivoCaption-2" class="nivo-html-caption">
-                        <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right">
-                            <h1 class="line-title title animated animation-delay-30"
-                                data-animate="fadeInUp">Pack a big punch<i class="fa">&#xf111;</i>
-                            </h1>
-                            <p class="desc animated animation-delay-50"
-                                data-animate="fadeInUp">
-                                Grown traditionally, harvested
-								naturally and roasted lovingly, they're the star of every cup
-                            </p>
-                        </div>
-                    </div>
-
+             <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
                 </div>
-            </div>
+
+          
 
         </header>
 
