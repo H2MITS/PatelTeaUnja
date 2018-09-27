@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Patel Tea</title>
+    <title>Patel Tea Packers</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,7 +60,7 @@
                             </div>
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="Default.aspx">Home</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="about.html">Products</a></li>
                                     <li><a href="about.html">Quality</a></li>
@@ -181,8 +181,7 @@
                                 <h3 class="title">Newsletter</h3>
                                 <div class="widget-content">
                                     <p>
-                                        If you world like sign-up to the origin
-										newsletter,please enter your email address below
+                                       To be the first to hear about our latest offers, competitions and news, sign up here. You can change your mind at any time by contacting us or using the unsubscribe option on emails we send you..
                                     </p>
                                     <form method="post" action="#">
                                         <p>
