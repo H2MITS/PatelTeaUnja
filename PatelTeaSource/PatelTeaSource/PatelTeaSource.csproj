@@ -72,6 +72,10 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -95,11 +99,36 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientSide\Default.aspx" />
+    <Content Include="CommingSoonTemp\index.html" />
+    <Content Include="CommingSoonTemp\vendor\countdowntime\countdowntime.js" />
+    <Content Include="CommingSoonTemp\vendor\countdowntime\moment-timezone-with-data.min.js" />
+    <Content Include="CommingSoonTemp\vendor\countdowntime\moment-timezone.min.js" />
+    <Content Include="CommingSoonTemp\vendor\countdowntime\moment.min.js" />
+    <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="Template\17.png" />
+    <Content Include="Template\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Template\assets\fonts\FontAwesome.otf" />
+    <Content Include="Template\assets\fonts\futura_bk_btbook.eot" />
+    <Content Include="Template\assets\fonts\futura_bk_btbook.ttf" />
+    <Content Include="Template\assets\fonts\futura_bk_btbook.woff" />
+    <Content Include="Template\assets\fonts\proxima\proxima_nova.eot" />
+    <Content Include="Template\assets\fonts\proxima\proxima_nova.ttf" />
+    <Content Include="Template\assets\fonts\proxima\proxima_nova.woff" />
+    <Content Include="Template\assets\fonts\proxima_nova.eot" />
+    <Content Include="Template\assets\fonts\proxima_nova.ttf" />
+    <Content Include="Template\assets\fonts\proxima_nova.woff" />
+    <Content Include="Template\assets\less\styles.less" />
+    <Content Include="ClientSide\Client.Master" />
+    <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -110,13 +139,285 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Template\ajax\gallery-v1-1.html" />
+    <Content Include="Template\ajax\gallery-v1-2.html" />
+    <Content Include="Template\ajax\gallery-v2-1.html" />
+    <Content Include="Template\ajax\gallery-v2-2.html" />
+    <Content Include="Template\ajax\index.html" />
+    <Content Include="Template\assets\css\animate.css" />
+    <Content Include="Template\assets\css\bootstrap.min.css" />
+    <Content Include="Template\assets\css\color\default.css" />
+    <Content Include="Template\assets\css\flickity.min.css" />
+    <Content Include="Template\assets\css\font-awesome.min.css" />
+    <Content Include="Template\assets\css\hover.css" />
+    <Content Include="Template\assets\css\index.css" />
+    <Content Include="Template\assets\css\main.css" />
+    <Content Include="Template\assets\css\nivo-slider.css" />
+    <Content Include="Template\assets\css\responsive.css" />
+    <Content Include="Template\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\assets\fonts\futura_bk_btbook.svg" />
+    <Content Include="Template\assets\fonts\proxima\generator_config.txt" />
+    <Content Include="Template\assets\fonts\proxima\proxima_nova.html" />
+    <Content Include="Template\assets\fonts\proxima\proxima_nova.svg" />
+    <Content Include="Template\assets\fonts\proxima\specimen_files\easytabs.js" />
+    <Content Include="Template\assets\fonts\proxima\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="Template\assets\fonts\proxima\specimen_files\specimen_stylesheet.css" />
+    <Content Include="Template\assets\fonts\proxima\stylesheet.css" />
+    <Content Include="Template\assets\fonts\proxima_nova.svg" />
+    <Content Include="Template\assets\imgs\arrow_left.gif" />
+    <Content Include="Template\assets\imgs\arrow_left.png" />
+    <Content Include="Template\assets\imgs\arrow_right.gif" />
+    <Content Include="Template\assets\imgs\arrow_right.png" />
+    <Content Include="Template\assets\imgs\big_transparent.gif" />
+    <Content Include="Template\assets\imgs\cursors\cursor_arrow_left.cur" />
+    <Content Include="Template\assets\imgs\cursors\cursor_arrow_left.gif" />
+    <Content Include="Template\assets\imgs\cursors\cursor_arrow_left.png" />
+    <Content Include="Template\assets\imgs\cursors\cursor_arrow_right.cur" />
+    <Content Include="Template\assets\imgs\cursors\cursor_arrow_right.gif" />
+    <Content Include="Template\assets\imgs\cursors\cursor_arrow_right.png" />
+    <Content Include="Template\assets\imgs\icon-map.png" />
+    <Content Include="Template\assets\imgs\index.html" />
+    <Content Include="Template\assets\imgs\list-style-1.png" />
+    <Content Include="Template\assets\imgs\list-style-2.png" />
+    <Content Include="Template\assets\imgs\logo-2.png" />
+    <Content Include="Template\assets\imgs\logo-3.png" />
+    <Content Include="Template\assets\imgs\logo.png" />
+    <Content Include="Template\assets\index.html" />
+    <Content Include="Template\assets\js\main.js" />
+    <Content Include="Template\assets\js\vendor\bootstrap.min.js" />
+    <Content Include="Template\assets\js\vendor\flickity.pkgd.min.js" />
+    <Content Include="Template\assets\js\vendor\imagesloaded.pkgd.min.js" />
+    <Content Include="Template\assets\js\vendor\isotope.pkgd.min.js" />
+    <Content Include="Template\assets\js\vendor\jquery-1.11.2.min.js" />
+    <Content Include="Template\assets\js\vendor\jquery.nivo.slider.pack.js" />
+    <Content Include="Template\assets\js\vendor\jquery.waypoints.min.js" />
+    <Content Include="Template\assets\js\vendor\less.min.js" />
+    <Content Include="Template\assets\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
+    <Content Include="Template\assets\js\vendor\sticky.min.js" />
+    <Content Include="Template\images\01.png" />
+    <Content Include="Template\images\02.png" />
+    <Content Include="Template\images\02b0f534c0c0e2249595537e29cbe95e.jpg" />
+    <Content Include="Template\images\06.png" />
+    <Content Include="Template\images\11.png" />
+    <Content Include="Template\images\13.png" />
+    <Content Include="Template\images\69959d76deb79f36c7da21a94baf6921.jpg" />
+    <Content Include="Template\images\about\about.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-1.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-10.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-11.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-12.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-13.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-14.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-2.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-3.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-4.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-5.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-6.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-7.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-8.jpg" />
+    <Content Include="Template\images\about\gallery\gallery-9.jpg" />
+    <Content Include="Template\images\about\ourMethods-1.png" />
+    <Content Include="Template\images\about\ourMethods-2.png" />
+    <Content Include="Template\images\about\ourMission.png" />
+    <Content Include="Template\images\about\ourPromise.png" />
+    <Content Include="Template\images\avatar\1.jpg" />
+    <Content Include="Template\images\avatar\2.jpg" />
+    <Content Include="Template\images\avatar\3.jpg" />
+    <Content Include="Template\images\avatar\4.jpg" />
+    <Content Include="Template\images\avatar\5.jpg" />
+    <Content Include="Template\images\avatar\6.jpg" />
+    <Content Include="Template\images\blog\blog.jpg" />
+    <Content Include="Template\images\blog\img-1.jpg" />
+    <Content Include="Template\images\blog\img-10.jpg" />
+    <Content Include="Template\images\blog\img-11.jpg" />
+    <Content Include="Template\images\blog\img-12.jpg" />
+    <Content Include="Template\images\blog\img-13.jpg" />
+    <Content Include="Template\images\blog\img-14.jpg" />
+    <Content Include="Template\images\blog\img-15.jpg" />
+    <Content Include="Template\images\blog\img-2.jpg" />
+    <Content Include="Template\images\blog\img-3.jpg" />
+    <Content Include="Template\images\blog\img-4.jpg" />
+    <Content Include="Template\images\blog\img-5.jpg" />
+    <Content Include="Template\images\blog\img-6.jpg" />
+    <Content Include="Template\images\blog\img-7.jpg" />
+    <Content Include="Template\images\blog\img-8.jpg" />
+    <Content Include="Template\images\blog\img-9.jpg" />
+    <Content Include="Template\images\contact\contact.jpg" />
+    <Content Include="Template\images\Download\img-1.png" />
+    <Content Include="Template\images\Download\img-2.png" />
+    <Content Include="Template\images\Download\img-3.png" />
+    <Content Include="Template\images\Download\info-img-2.png" />
+    <Content Include="Template\images\Download\info-img-3.png" />
+    <Content Include="Template\images\galleries\galleries.jpg" />
+    <Content Include="Template\images\galleries\img-1.jpg" />
+    <Content Include="Template\images\galleries\img-10.jpg" />
+    <Content Include="Template\images\galleries\img-11.jpg" />
+    <Content Include="Template\images\galleries\img-12.jpg" />
+    <Content Include="Template\images\galleries\img-13.jpg" />
+    <Content Include="Template\images\galleries\img-14.jpg" />
+    <Content Include="Template\images\galleries\img-15.jpg" />
+    <Content Include="Template\images\galleries\img-2.jpg" />
+    <Content Include="Template\images\galleries\img-3.jpg" />
+    <Content Include="Template\images\galleries\img-4.jpg" />
+    <Content Include="Template\images\galleries\img-5.jpg" />
+    <Content Include="Template\images\galleries\img-6.jpg" />
+    <Content Include="Template\images\galleries\img-7.jpg" />
+    <Content Include="Template\images\galleries\img-8.jpg" />
+    <Content Include="Template\images\galleries\img-9.jpg" />
+    <Content Include="Template\images\gallery\img-1.jpg" />
+    <Content Include="Template\images\gallery\img-10.jpg" />
+    <Content Include="Template\images\gallery\img-11.jpg" />
+    <Content Include="Template\images\gallery\img-12.jpg" />
+    <Content Include="Template\images\gallery\img-13.jpg" />
+    <Content Include="Template\images\gallery\img-14.jpg" />
+    <Content Include="Template\images\gallery\img-15.jpg" />
+    <Content Include="Template\images\gallery\img-2.jpg" />
+    <Content Include="Template\images\gallery\img-3.jpg" />
+    <Content Include="Template\images\gallery\img-4.jpg" />
+    <Content Include="Template\images\gallery\img-5.jpg" />
+    <Content Include="Template\images\gallery\img-6.jpg" />
+    <Content Include="Template\images\gallery\img-7.jpg" />
+    <Content Include="Template\images\gallery\img-8.jpg" />
+    <Content Include="Template\images\gallery\img-9.jpg" />
+    <Content Include="Template\images\home\gallery\img-1.jpg" />
+    <Content Include="Template\images\home\gallery\img-2.jpg" />
+    <Content Include="Template\images\home\gallery\img-3.jpg" />
+    <Content Include="Template\images\home\gallery\img-4.jpg" />
+    <Content Include="Template\images\home\gallery\img-5.jpg" />
+    <Content Include="Template\images\home\gallery\img-6.jpg" />
+    <Content Include="Template\images\home\image3.png" />
+    <Content Include="Template\images\home\info\info-bg.jpg" />
+    <Content Include="Template\images\home\info\info-img-1.png" />
+    <Content Include="Template\images\home\info\info-img-2.png" />
+    <Content Include="Template\images\home\info\info-img-3.png" />
+    <Content Include="Template\images\home\latest\bg.png" />
+    <Content Include="Template\images\home\latest\img-1.png" />
+    <Content Include="Template\images\home\latest\img-2.png" />
+    <Content Include="Template\images\home\services\bg_menu.jpg" />
+    <Content Include="Template\images\home\services\service-1.png" />
+    <Content Include="Template\images\home\services\service-2.png" />
+    <Content Include="Template\images\home\services\service-3.png" />
+    <Content Include="Template\images\home\services\service-4.png" />
+    <Content Include="Template\images\home\services\service-5.png" />
+    <Content Include="Template\images\home\services\service-6.png" />
+    <Content Include="Template\images\home\slider\img-1.png" />
+    <Content Include="Template\images\home\slider\img-2.png" />
+    <Content Include="Template\images\home\slider\img-3.png" />
+    <Content Include="Template\images\home\slider\img-4.png" />
+    <Content Include="Template\images\home\slider\slider-1.jpg" />
+    <Content Include="Template\images\home\slider\slider-2.jpg" />
+    <Content Include="Template\images\home\slider\slider-3.jpg" />
+    <Content Include="Template\images\home\slider\slider-4.jpg" />
+    <Content Include="Template\images\home\slider\slider-5.jpg" />
+    <Content Include="Template\images\home\slider\slider-6.jpg" />
+    <Content Include="Template\images\home\slider\slider-7.jpg" />
+    <Content Include="Template\images\home\slider\slider-8.jpg" />
+    <Content Include="Template\images\home\slider\slider-9.jpg" />
+    <Content Include="Template\images\home\video-1.jpg" />
+    <Content Include="Template\images\home\video-2.jpg" />
+    <Content Include="Template\images\info-img-1.png" />
+    <Content Include="Template\images\info-img-2.png" />
+    <Content Include="Template\images\mega-menu\mega-menu.jpg" />
+    <Content Include="Template\images\menus\br-1.png" />
+    <Content Include="Template\images\menus\br-2.png" />
+    <Content Include="Template\images\menus\br-3.png" />
+    <Content Include="Template\images\menus\br-4.png" />
+    <Content Include="Template\images\menus\cake-1.png" />
+    <Content Include="Template\images\menus\cake-2.png" />
+    <Content Include="Template\images\menus\cake-3.png" />
+    <Content Include="Template\images\menus\cake-4.png" />
+    <Content Include="Template\images\menus\coctail-1.png" />
+    <Content Include="Template\images\menus\coctail-2.png" />
+    <Content Include="Template\images\menus\coctail-3.png" />
+    <Content Include="Template\images\menus\coctail-4.png" />
+    <Content Include="Template\images\menus\coffee-1.png" />
+    <Content Include="Template\images\menus\coffee-2.png" />
+    <Content Include="Template\images\menus\coffee-3.png" />
+    <Content Include="Template\images\menus\coffee-4.png" />
+    <Content Include="Template\images\menus\menu-1.png" />
+    <Content Include="Template\images\menus\menu-2.png" />
+    <Content Include="Template\images\menus\menu-3.png" />
+    <Content Include="Template\images\menus\menu-4.png" />
+    <Content Include="Template\images\menus\menu-5.png" />
+    <Content Include="Template\images\menus\menu-6.png" />
+    <Content Include="Template\images\menus\menus.jpg" />
+    <Content Include="Template\images\menus\milkli-1.png" />
+    <Content Include="Template\images\menus\milkli-2.png" />
+    <Content Include="Template\images\menus\milkli-3.png" />
+    <Content Include="Template\images\menus\milkli-4.png" />
+    <Content Include="Template\images\menus\tea-1.png" />
+    <Content Include="Template\images\menus\tea-2.png" />
+    <Content Include="Template\images\menus\tea-3.png" />
+    <Content Include="Template\images\menus\tea-4.png" />
+    <Content Include="Template\images\paralax-right.png" />
+    <Content Include="Template\images\screenshots\style_v1.jpg" />
+    <Content Include="Template\images\screenshots\style_v2.jpg" />
+    <Content Include="Template\images\screenshots\style_v3.jpg" />
+    <Content Include="Template\images\slider-5.jpg" />
+    <Content Include="Template\images\slider-6.jpg" />
+    <Content Include="Template\images\SLIFER.jpeg" />
+    <Content Include="Template\LOGOHindi.png" />
+    <Content Include="Template\style-v2\about.html" />
+    <Content Include="Template\style-v2\blog-v1.html" />
+    <Content Include="Template\style-v2\blog-v2.html" />
+    <Content Include="Template\style-v2\blog-v3.html" />
+    <Content Include="Template\style-v2\contact.html" />
+    <Content Include="Template\style-v2\galleries-v1.html" />
+    <Content Include="Template\style-v2\galleries-v2.html" />
+    <Content Include="Template\style-v2\galleries-v3.html" />
+    <Content Include="Template\style-v2\index.html" />
+    <Content Include="Template\style-v2\menu.html" />
+    <Content Include="Template\style-v2\post.html" />
+    <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ClientSide\Client.Master.cs">
+      <DependentUpon>Client.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientSide\Client.Master.designer.cs">
+      <DependentUpon>Client.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ClientSide\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientSide\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CommingSoonTemp\css\" />
+    <Folder Include="CommingSoonTemp\fonts\" />
+    <Folder Include="CommingSoonTemp\images\" />
+    <Folder Include="CommingSoonTemp\js\" />
+    <Folder Include="Template\php\" />
+    <Folder Include="Template\style-v1\" />
+    <Folder Include="Template\style-v3\" />
+    <Folder Include="Template\style-v4\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
