@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
@@ -21,36 +20,36 @@
             <div id="nivoCaption-1" class="nivo-html-caption">
                 <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right">
                     <h1 class="line-title title animated animation-delay-30"
-                        data-animate="fadeInUp">Advertising based<i class="fa">&#xf111;</i>
+                        data-animate="fadeInUp">EXPLORE THE WORLD OF PATEL TEA<i class="fa">&#xf111;</i>
                     </h1>
                     <p class="desc animated animation-delay-50"
                         data-animate="fadeInUp">
-                        Coffee culture is a great coffee
-								taste and it rests on the basis of responsible &amp; respectful
+                        We only Select tea,
+								from the best estate in the world
                     </p>
                 </div>
             </div>
             <div id="nivoCaption-3" class="nivo-html-caption">
                 <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right;">
                     <h1 class="line-title title animated animation-delay-30"
-                        data-animate="fadeInUp" style="color: black">Pack a big punch<i class="fa">&#xf111;</i>
+                        data-animate="fadeInUp" style="color: black">TEA AS IT NATURALLY SHOULD BE<i class="fa">&#xf111;</i>
                     </h1>
                     <p class="desc animated animation-delay-50"
                         data-animate="fadeInUp" style="color: black">
-                        Grown traditionally, harvested
-								naturally and roasted lovingly, they're the star of every cup
+                        Grown traditionally,
+								harvested naturally and roasted lovingly, they're the star of every cup
                     </p>
                 </div>
             </div>
             <div id="nivoCaption-2" class="nivo-html-caption">
                 <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right">
                     <h1 class="line-title title animated animation-delay-30"
-                        data-animate="fadeInUp">Pack a big punch<i class="fa">&#xf111;</i>
+                        data-animate="fadeInUp">EXPERIENCE MORE WITH PATEL TEA<i class="fa">&#xf111;</i>
                     </h1>
                     <p class="desc animated animation-delay-50"
                         data-animate="fadeInUp">
-                        Grown traditionally, harvested
-								naturally and roasted lovingly, they're the star of every cup
+                        Our blends reflect the diversity of Culture,
+								Regions,Tastes and Experiences.
                     </p>
                 </div>
             </div>
@@ -65,28 +64,27 @@
             <div class="row">
                 <div class="col-sm-6 col-sm-push-6">
                     <figure>
-                        <img alt="" src="../Template/images/info-img-1.png" class="animated" data-animate="fadeInRight animation animation-delay-25" />
-                        <img alt="" src="../Template/images/info-img-2.png" class="animated" data-animate="fadeInRight animation" />
+                        <img alt="" src="../Template/images/info-img-1.png" style="width:250px;height:600px" class="animated" data-animate="fadeInRight animation animation-delay-25" />
+                        <img alt="" src="../Template/images/info-img-2.png" style="width:300px;height:600px" class="animated" data-animate="fadeInRight animation" />
 
                     </figure>
                 </div>
 
+                
                 <div class="col-sm-6 col-sm-pull-6">
-                    <h1 class="title line-title">Welcome to Patel Tea<i class="fa">&#xf111;</i>
+                    <h1 class="title line-title">
+                        
+                        
+                        Welcome to Patel Tea Packers<i class="fa">&#xf111;</i>
                     </h1>
                     <aside>
                         <p>
-                            Cmspresso is the process that slowly and gradually
-									releases the purest of essence. As tea leaves unravel and
-									coffee patiently drips, it is the best representation of the
-									making of tea and coffee. We want the tea and coffee from
-									Cmspresso to express their many levels of character through a
-									thoughtful and caring hand.
+                            An Indian owned brand, Patel Tea Packers, blends organic and exotic tea, along with organic teas. Established in the year 1954,
+                             The Patel Tea enriches people with their various products of tea.
                         </p>
                         <p>
-                            Cmspresso is a concept that we wish to pass for-ward.
-									Cmspresso means a healthy and positive outlook for the adopters
-									of this great attitude.
+                            While blending tea, every care is taken by Patel to make each cup add a little refreshment and joy for the day.
+                            Tea buyers get the pure teas from the world’s finest tea quality and botanicals. By getting the pure tea from botanicals, the customers are able to take pure tea. Patel makes sure that the tea is tasted multiple times before it reaches the customers.
                         </p>
                     </aside>
                 </div>
@@ -280,13 +278,14 @@
                     <aside>
                         <h3 class="title">Special Patti (CTC Leaf Tea) <b>PREMIUM Quality</b></h3>
                         <ul>
-                            <li>1 cup unsweetened cocoa powder</li>
-                            <li>1/2 cup butter, cut into 1&ndash;inch pieces</li>
-                            <li>1 1/4 cups granulated sugar</li>
-                            <li>1/2 cup firmly packed dark brown sugar</li>
-                            <li>1 1/4 tsp baking soda</li>
-                            <li>Add a Klean Kanteen Insulated Coffee Flask / Shaker
-										&amp; a Cafe Cap</li>
+                           <ul>
+                            <li><strong>Brand:</strong> Patel Tea Packers  </li>
+                            <li><strong>Packaging Size:</strong> 1kg,500gm,250gm </li>
+                            <li><strong>Type:</strong>Organic</li>
+                            <li>No Added Preservative</li>
+                            <li>Botanically Tested</li>
+                            <li>No Artifical Ingredients</li>
+                        </ul>
                         </ul>
                     </aside>
                 </div>
@@ -349,6 +348,43 @@
 						Bulletproof coffee. We use it very day.”</h4>
         </div>--%>
     </section>
+    <section id="bulletproof1" class="section bulletproof" style="padding: 25px 0 50px !important";>
+
+        <div class="container">
+            
+           <div class="col-sm-12" style="text-align:center;margin-top:-73px">
+                    <h1 class="title line-title"><label style="color:white">In The Spotlight</label><i class="fa">&#xf111;</i>
+                    </h1>
+                </div>
+            <div class="row">
+                 
+                <div class="col-sm-6">
+                    <figure class="animated" data-animate="fadeInLeft animation" style="margin-top: -42px !important;text-align:center !important">
+                       <img alt="" style="width: 50%; margin-top: 31px; transform: rotate(352deg);" src="../Template/images/13.png" />
+                  
+                    </figure>
+                </div>
+                <div class="col-sm-6">
+                       <aside>
+                        <h3 class="title">Special Patti (CTC Leaf Tea) <b>PREMIUM Quality</b></h3>
+                        <ul>
+                           <ul>
+                            <li><strong>Brand:</strong> Patel Tea Packers  </li>
+                            <li><strong>Packaging Size:</strong> 1kg,500gm,250gm </li>
+                            <li><strong>Type:</strong>Organic</li>
+                            <li>No Added Preservative</li>
+                            <li>Botanically Tested</li>
+                            <li>No Artifical Ingredients</li>
+                        </ul>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+            <h4 class="title">“The easiest and most convenient way I have used in making
+						Bulletproof coffee. We use it very day.”</h4>
+        </div>
+
+          </section>
      <section id="bulletproof" class="section bulletproof" style="padding: 25px 0 50px !important";>
 
         <div class="container">
@@ -367,16 +403,17 @@
                     </figure>
                 </div>
                 <div class="col-sm-6">
-                    <aside>
-                        <h3 class="title">Dazzling (Strong Leaf Tea) <b>MEDIUM Quality</b></h3>
+                         <aside>
+                        <h3 class="title">Special Patti (CTC Leaf Tea) <b>PREMIUM Quality</b></h3>
                         <ul>
-                            <li>1 cup unsweetened cocoa powder</li>
-                            <li>1/2 cup butter, cut into 1&ndash;inch pieces</li>
-                            <li>1 1/4 cups granulated sugar</li>
-                            <li>1/2 cup firmly packed dark brown sugar</li>
-                            <li>1 1/4 tsp baking soda</li>
-                            <li>Add a Klean Kanteen Insulated Coffee Flask / Shaker
-										&amp; a Cafe Cap</li>
+                           <ul>
+                            <li><strong>Brand:</strong> Patel Tea Packers  </li>
+                            <li><strong>Packaging Size:</strong> 1kg,500gm,250gm </li>
+                            <li><strong>Type:</strong>Organic</li>
+                            <li>No Added Preservative</li>
+                            <li>Botanically Tested</li>
+                            <li>No Artifical Ingredients</li>
+                        </ul>
                         </ul>
                     </aside>
                 </div>
@@ -387,40 +424,5 @@
 
           </section>
 
-     <section id="bulletproof1" class="section bulletproof" style="padding: 25px 0 50px !important";>
-
-        <div class="container">
-            
-           <div class="col-sm-12" style="text-align:center;margin-top:-73px">
-                    <h1 class="title line-title"><label style="color:white">In The Spotlight</label><i class="fa">&#xf111;</i>
-                    </h1>
-                </div>
-            <div class="row">
-                 
-                <div class="col-sm-6">
-                    <figure class="animated" data-animate="fadeInLeft animation" style="margin-top: -42px !important;text-align:center !important">
-                       <img alt="" style="width: 50%; margin-top: 31px; transform: rotate(352deg);" src="../Template/images/13.png" />
-                  
-                    </figure>
-                </div>
-                <div class="col-sm-6">
-                    <aside>
-                        <h3 class="title"><b>CTC Jino Dano</b></h3>
-                        <ul>
-                            <li>1 cup unsweetened cocoa powder</li>
-                            <li>1/2 cup butter, cut into 1&ndash;inch pieces</li>
-                            <li>1 1/4 cups granulated sugar</li>
-                            <li>1/2 cup firmly packed dark brown sugar</li>
-                            <li>1 1/4 tsp baking soda</li>
-                            <li>Add a Klean Kanteen Insulated Coffee Flask / Shaker
-										&amp; a Cafe Cap</li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
-            <h4 class="title">“The easiest and most convenient way I have used in making
-						Bulletproof coffee. We use it very day.”</h4>
-        </div>
-
-          </section>
+     
 </asp:Content>
