@@ -99,6 +99,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientSide\Contactus.aspx" />
     <Content Include="ClientSide\Default.aspx" />
     <Content Include="CommingSoonTemp\index.html" />
     <Content Include="CommingSoonTemp\vendor\countdowntime\countdowntime.js" />
@@ -177,7 +178,7 @@
     <Content Include="Template\assets\imgs\cursors\cursor_arrow_right.png" />
     <Content Include="Template\assets\imgs\icon-map.png" />
     <Content Include="Template\assets\imgs\index.html" />
-    <Content Include="Template\assets\imgs\list-style-1.png" />
+    <Content Include="Template\assets\imgs\list-style-1-Leaf.png" />
     <Content Include="Template\assets\imgs\list-style-2.png" />
     <Content Include="Template\assets\imgs\logo-2.png" />
     <Content Include="Template\assets\imgs\logo-3.png" />
@@ -243,6 +244,8 @@
     <Content Include="Template\images\blog\img-8.jpg" />
     <Content Include="Template\images\blog\img-9.jpg" />
     <Content Include="Template\images\contact\contact.jpg" />
+    <Content Include="Template\images\Download\Darjeeling-Leaf-Tea.jpg" />
+    <Content Include="Template\images\Download\Gold-CTC-Orthodox-Blend-Image_6-600x600.jpg" />
     <Content Include="Template\images\Download\img-1.png" />
     <Content Include="Template\images\Download\img-2.png" />
     <Content Include="Template\images\Download\img-3.png" />
@@ -379,6 +382,13 @@
     </Compile>
     <Compile Include="ClientSide\Client.Master.designer.cs">
       <DependentUpon>Client.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ClientSide\Contactus.aspx.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientSide\Contactus.aspx.designer.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClientSide\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
