@@ -322,7 +322,7 @@
                     <aside>
                         <h3 class="title">Special Patti (CTC Leaf Tea) <b>PREMIUM Quality</b></h3>
                         <ul>
-                            
+                           <ul>
                             <li><strong>Brand:</strong> Patel Tea Packers  </li>
                             <li><strong>Packaging Size:</strong> 1kg,500gm,250gm </li>
                             <li><strong>Type:</strong>Organic</li>

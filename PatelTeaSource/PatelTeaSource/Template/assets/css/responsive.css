@@ -18,7 +18,7 @@ Content Tabel
 
 @media (min-width: 768px) {
     .style-v2 .logo {
-        width: 120px;
+        max-width: 120px;
     }
 
     .galleries .gallery-item.col-sm-6 {
@@ -85,7 +85,7 @@ Content Tabel
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .style-v2 .logo {
-        width: 100px;
+        max-width: 100px;
     }
 
     .navbar-nav > li {
@@ -209,7 +209,7 @@ Content Tabel
 
 @media (min-width: 768px) and (max-width: 991px) {
     .style-v2 .logo {
-        width: 80px;
+        max-width: 80px;
     }
 
     .style-v2 #primary-navigation {
@@ -438,7 +438,7 @@ Content Tabel
     .style-v2 .logo {
         display: block;
         margin: 0;
-        
+        width: 80px;
     }
 
     .style-v3 .logo {
@@ -455,7 +455,7 @@ Content Tabel
             margin: 0 !important;
             display: block;
             text-align: left;
-            
+            width: 80px;
         }
 
     .style-v3 .header-left,
