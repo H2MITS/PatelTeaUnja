@@ -769,7 +769,8 @@ h1.title{
 .bulletproof ul{
 	padding: 0 0 0 20px;
 	margin: 0;
-	list-style-image: url("../imgs/list-style-1.png");
+	list-style-image: url("../imgs/list-style-1-Leaf.png");
+    
 }
 .bulletproof h4.title{
 	text-align: center;

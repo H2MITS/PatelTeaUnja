@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Patel Tea Packers</title>
 
-      
+
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" rel="stylesheet"
@@ -35,38 +35,38 @@
 </head>
 <body class="loadpage home style-v2">
     <form id="form1" runat="server">
-    <div id="wrap">
+        <div id="wrap">
 
-        <header class="header">
-            <div class="header-inner">
-                <div class="container">
-                    <!-- Logo -->
-                    <div id="logo" class="logo" style="max-width: 80px;">
-                        <a href="index.html">
-                            <img alt="The Retation" src="../Template/17.png" /></a>
-                    </div>
+            <header class="header">
+                <div class="header-inner">
+                    <div class="container">
+                        <!-- Logo -->
+                        <div id="logo" class="logo">
+                            <a href="index.html">
+                                <img alt="The Retation" src="../Template/17.png" /></a>
+                        </div>
 
-                    <!-- Main Menu -->
+                        <!-- Main Menu -->
 
-                    <nav id="primary-navigation" class="navbar" role="navigation">
-                        <div class="navbar-inner">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed"
-                                    data-toggle="collapse" data-target="#navbar">
-                                    <span class="sr-only">Toggle navigation</span> <span
-                                        class="icon-bar"></span><span class="icon-bar"></span><span
-                                            class="icon-bar"></span>
-                                </button>
-                                <h3 class="navbar-brand">Menu</h3>
-                            </div>
-                            <div id="navbar" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav">
-                                    <li class="active"><a href="Default.aspx">Home</a></li>
-                                    <li><a href="../CommingSoonTemp/index.html">About</a></li>
-                                    <li><a href="../CommingSoonTemp/index.html">Products</a></li>
-                                    <li><a href="../CommingSoonTemp/index.html">Quality</a></li>
-                                    <li><a href="../CommingSoonTemp/index.html">Awards</a></li>
-                                    <%--<li><a href="menu.html">Menu</a>
+                        <nav id="primary-navigation" class="navbar" role="navigation">
+                            <div class="navbar-inner">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed"
+                                        data-toggle="collapse" data-target="#navbar">
+                                        <span class="sr-only">Toggle navigation</span> <span
+                                            class="icon-bar"></span><span class="icon-bar"></span><span
+                                                class="icon-bar"></span>
+                                    </button>
+                                    <h3 class="navbar-brand">Menu</h3>
+                                </div>
+                                <div id="navbar" class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"><a href="Default.aspx">Home</a></li>
+                                        <li><a href="../CommingSoonTemp/index.html">About</a></li>
+                                        <li><a href="../CommingSoonTemp/index.html">Products</a></li>
+                                        <li><a href="../CommingSoonTemp/index.html">Quality</a></li>
+                                        <li><a href="../CommingSoonTemp/index.html">Awards</a></li>
+                                        <%--<li><a href="menu.html">Menu</a>
                                         <div class="mega-menu">
                                             <div class="mega-menu-inner">
                                                 <div class="mega-cols">
@@ -109,63 +109,61 @@
                                             </ul>
                                         </div>
                                     </li>--%>
-                                    <li><a href="Contactus.aspx">Contacts Us</a></li>
-                                    <li><a href="../CommingSoonTemp/index.html">Where to buy</a></li>
-                                </ul>
+                                        <li><a href="Contactus.aspx">Contacts Us</a></li>
+                                        <li><a href="../CommingSoonTemp/index.html">Where to buy</a></li>
+                                    </ul>
+                                </div>
+                                <!--/.navbar-collapse -->
                             </div>
-                            <!--/.navbar-collapse -->
-                        </div>
-                    </nav>
+                        </nav>
 
-                    <%-- <div class="header-right">
+                        <%-- <div class="header-right">
                         <ul class="nav">
                             <li><a href="#">Login</a></li>
                             <li><a href="#">Register</a></li>
                         </ul>
                     </div>--%>
+                    </div>
+
                 </div>
 
-            </div>
-
-             <div>
+                <div>
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
 
-          
 
-        </header>
 
-        <div id="main-content" class="main-content">
-            
+            </header>
+
+            <div id="main-content" class="main-content">
+
                 <div>
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
-            
-        </div>
-        <footer id="footer">
-            <div class="footer-info">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <aside class="widget">
-                                <h3 class="title">About Us</h3>
-                                <div class="widget-content contact-us">
-                                    <p>
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high
-										life accusamus terry richardson ad squid.
-                                    </p>
-                                    <p><i class="fa">&#xf0e0;</i><span>hello@mtheme.org</span></p>
-                                    <p><i class="fa">&#xf095;</i><span>+(84)123456789</span></p>
-                                    <p>
-                                        <i class="fa">&#xf015;</i><span>198 West 21th Street, Suite 721 New York
-										NY 10010</span>
-                                    </p>
-                                </div>
-                            </aside>
-                        </div>
-                        <div class="col-sm-3">
+
+            </div>
+            <footer id="footer">
+                <div class="footer-info">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <aside class="widget">
+                                    <h3 class="title">About Us</h3>
+                                    <div class="widget-content contact-us">
+                                        <p>
+                                            Explore over 60 years of innovation, creativity and masterblending expertise. For us, tea is more than just a drink. It's been part of our daily lives and the lives of generations of tea lovers 
+                                        </p>
+                                        <p><i class="fa">&#xf0e0;</i><span>pateltea@ymail.com</span></p>
+                                        <p><i class="fa">&#xf095;</i><span>(+91)-2767-247936</span></p>
+                                        <p>
+                                            <i class="fa">&#xf015;</i><span>Unava Bypass Highway, At. &, Dist. Mehsana,(North Gujarat) INDIA</span>
+                                        </p>
+                                    </div>
+                                </aside>
+                            </div>
+                            <%-- <div class="col-sm-3">
                             <aside class="widget">
                                 <h3 class="title">For Business</h3>
                                 <div class="widget-content">
@@ -176,59 +174,73 @@
                                     </ul>
                                 </div>
                             </aside>
-                        </div>
-                        <div class="col-sm-3">
-                            <aside class="widget">
-                                <h3 class="title">Newsletter</h3>
-                                <div class="widget-content">
-                                    <p>
-                                       To be the first to hear about our latest offers, competitions and news, sign up here. You can change your mind at any time by contacting us or using the unsubscribe option on emails we send you..
-                                    </p>
-                                    <form method="post" action="#">
+                        </div>--%>
+                            <div class="col-sm-3">
+                                <aside class="widget">
+                                    <h3 class="title">Newsletter</h3>
+                                    <div class="widget-content">
                                         <p>
-                                            <input type="text" value="" name="name" placeholder="Name"
-                                                required="required" class="name">
+                                            To be the first to hear about our latest offers, competitions and news, sign up here. You can change your mind at any time by contacting us or using the unsubscribe option on emails we send you..
                                         </p>
-                                        <p>
-                                            <input type="email" value="" name="email" placeholder="Email"
-                                                required="required" class="email">
-                                        </p>
-                                        <p>
-                                            <button class="hvr-shutter-out-horizontal">Subscribe</button>
-                                        </p>
-                                    </form>
-                                </div>
-                            </aside>
-                        </div>
-                        <div class="col-sm-3">
-                            <aside class="widget">
-                                <h3 class="title">Follow Us</h3>
-                                <div class="widget-content">
-                                    <p>Follow Origin on the following social network sites.</p>
-                                    <ul class="social">
-                                        <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf09a;</i></a></li>
-                                        <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf099;</i></a></li>
-                                        <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf0d5;</i></a></li>
-                                        <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf09e;</i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </aside>
+                                        <form method="post" action="#">
+                                            <p>
+                                                <input type="text" value="" name="name" placeholder="Name"
+                                                    required="required" class="name">
+                                            </p>
+                                            <p>
+                                                <input type="email" value="" name="email" placeholder="Email"
+                                                    required="required" class="email">
+                                            </p>
+                                            <p>
+                                                <button class="hvr-shutter-out-horizontal">Subscribe</button>
+                                            </p>
+                                        </form>
+                                    </div>
+                                </aside>
+                            </div>
+                            <div class="col-sm-3">
+                                <aside class="widget">
+                                    <h3 class="title">Follow Us</h3>
+                                    <div class="widget-content">
+                                        <p>Follow Origin on the following social network sites.</p>
+                                        <ul class="social">
+                                            <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf09a;</i></a></li>
+                                            <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf099;</i></a></li>
+                                            <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf0d5;</i></a></li>
+                                            <li><a href="#" class="hvr-rectangle-out" target="_blank"><i class="fa">&#xf09e;</i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </aside>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="copyright">
-                <div class="container">
-                    <p>
-                        Copyright &copy; 2015 <a href="http://themeforest.net/user/mtheme_market">mTheme</a>. All Rights Reserved.
-                    </p>
+                <div class="copyright">
+                    <div class="container">
+                        <div class="col-md-12" style="width:100%">
+                            <div class="row">
+                                <div class="col-md-6" style="text-align:left;padding-left:1px !important;padding-right:4px !important">
+                                    <p>
+                                        Copyright &copy; 2018 <a href="http://pateltea.co.in">Patel Tea Packers</a>. All Rights Reserved.
+                                    </p>
+
+                                </div>
+                                <div class="col-md-6" style="text-align:right;padding-left:13px">
+
+                                    <p>
+                                        Developed By <a href="http://www.h2mSolution.com">H2M Solution</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
 
-        </footer>
+            </footer>
 
-    </div>
+        </div>
     </form>
 
     <script src="../Template/assets/js/vendor/jquery-1.11.2.min.js"></script>
