@@ -120,13 +120,16 @@
                         Welcome to Patel Tea Packers<i class="fa">&#xf111;</i>
                     </h1>
                     <aside>
-                        <p>
-                            An Indian owned brand, Patel Tea Packers, blends organic and exotic tea, along with organic teas. Established in the year 1954,
+                        <p style="text-align:justify">
+                           An Indian owned brand, Patel Tea Packers, blends organic and exotic tea, along with organic teas. Established in the year 1954,
                              The Patel Tea enriches people with their various products of tea.
                         </p>
-                        <p>
-                            While blending tea, every care is taken by Patel to make each cup add a little refreshment and joy for the day.
+                        <p style="text-align:justify">
+                            While blending tea, every care is taken by Patel to make each cup add a refreshment and joy for the day.
                             Tea buyers get the pure teas from the world’s finest tea quality and botanicals. By getting the pure tea from botanicals, the customers are able to take pure tea. Patel makes sure that the tea is tasted multiple times before it reaches the customers.
+                        </p>
+                        <p style="text-align:justify">
+                            Patel Tea Packers process is carried out by the means of stringent quality control process,in modern automated factories with untouched hands under the supervision of a knowledgeable team of professionals.The end result is a high quality tea that connoisseurs the world over the acclaimed as the finest.
                         </p>
                     </aside>
                 </div>
@@ -405,6 +408,7 @@
                     <figure class="animated" data-animate="fadeInLeft animation" style="margin-top: -42px !important;text-align:center !important">
                            <div class="myButton">
                          <img alt="" style="width: 50%; margin-top: 31px; transform: rotate(352deg);" src="../Template/images/13.png" />
+                               <img alt="" style="width: 35%; margin-top: 60px;margin-left: -14px; transform: rotate(360deg);" src="../Template/images/JD_250g.png" />
                   </div>
                     </figure>
                 </div>
@@ -441,8 +445,8 @@
                 <div class="col-sm-6">
                     <figure class="animated" data-animate="fadeInLeft animation" style="margin-top: -42px !important;text-align:center !important">
                          <div class="myButton">
-                          <img alt="" style="width: 35%; margin-top: 40px;" src="../Template/images/06.png" />
-                       <img alt="" style="width: 35%; margin-top: 82px; transform: rotate(360deg);" src="../Template/images/11.png" />
+                          <img alt="" style="width: 35%; margin-top: 40px;" src="../Template/images/Degalig_500g.png" />
+                       <img alt="" style="width: 35%; margin-top: 64px; transform: rotate(360deg);" src="../Template/images/11.png" />
                   </div>
                     </figure>
                 </div>

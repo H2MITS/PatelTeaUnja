@@ -91,26 +91,26 @@
                                     <div class="col-sm-4">
                                         <p class="contact-form-author">
                                              
-                                            <asp:TextBox ID="TextBox1" runat="server" CssClass="textBoxCSS" placeholder="Name"></asp:TextBox>
+                                            <asp:TextBox ID="TextBox1" runat="server" CssClass="textBoxCSS" placeholder="Name" Font-Size="Larger"></asp:TextBox>
                                         </p>
                                     </div>
                                     <div class="col-sm-4">
                                         <p class="contact-form-email">
-                                        <asp:TextBox ID="TextBox2" runat="server" CssClass="textBoxCSS" placeholder="Email"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox2" runat="server" CssClass="textBoxCSS" placeholder="Email" Font-Size="Larger"></asp:TextBox>
                                         </p>
                                     </div>
                                     <div class="col-sm-4">
                                         <p class="contact-form-subject">
-                                            <asp:TextBox ID="TextBox3" runat="server" CssClass="textBoxCSS" placeholder="Subject"></asp:TextBox>
+                                            <asp:TextBox ID="TextBox3" runat="server" CssClass="textBoxCSS" placeholder="Subject" Font-Size="Larger"></asp:TextBox>
                                         </p>
                                     </div>
                                 </div>
 
                                 <p class="contact-form-message">
-                                <asp:TextBox ID="TextBox4" runat="server" CssClass="textBoxCSS" placeholder="Message" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                                <asp:TextBox ID="TextBox4" runat="server" CssClass="textBoxCSS" placeholder="Message" TextMode="MultiLine" Rows="5" style="resize: none;" Font-Size="Larger"></asp:TextBox>
                                 </p>
                                 <p class="form-submit button">
-                                    <button class="hvr-rectangle-out" type="submit" id="submit"
+                                    <button class="hvr-rectangle-out btnCss" type="submit" id="submit"
                                         name="submit">
                                         Send Message</button>
 
@@ -126,8 +126,13 @@
 
             <div class="mapouter">
                 <div class="gmap_canvas">
-                    <iframe width="1500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Patel%20Tea%20Packers%20Unava&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <a href="https://www.crocothemes.net"></a></div>
+                    <%--<iframe width="1500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Patel%20Tea%20Packers%20Unava&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>--%>
+                    <a href="https://www.crocothemes.net"></a>
+
+                    <div style="width: 100%">
+                        <iframe width="100%" height="600" id="gmap_canvas" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=23.770065, 72.369814&amp;q=+(Patel%20Tea%20Packers)&amp;ie=UTF8&amp;t=h&amp;z=18&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Add map to website</a></iframe></div><br />
+
+                </div>
                 <style>
                     .mapouter {
                         text-align: right;
