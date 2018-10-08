@@ -13,5 +13,10 @@ namespace PatelTeaSource.ClientSide
         {
 
         }
+
+        private void makeActive()
+        {
+            Response.Write("<script> alert('Active') </script>");
+        }
     }
 }

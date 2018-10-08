@@ -81,6 +81,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -99,6 +100,152 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminSide\AddBanner.aspx" />
+    <Content Include="AdminSide\AdminTemplate\buttons.html" />
+    <Content Include="AdminSide\AdminTemplate\calendar.html" />
+    <Content Include="AdminSide\AdminTemplate\charts.html" />
+    <Content Include="AdminSide\AdminTemplate\chat.html" />
+    <Content Include="AdminSide\AdminTemplate\css\bootstrap-responsive.min.css" />
+    <Content Include="AdminSide\AdminTemplate\css\bootstrap-wysihtml5.css" />
+    <Content Include="AdminSide\AdminTemplate\css\bootstrap.min.css" />
+    <Content Include="AdminSide\AdminTemplate\css\colorpicker.css" />
+    <Content Include="AdminSide\AdminTemplate\css\datepicker.css" />
+    <Content Include="AdminSide\AdminTemplate\css\font-awesome.css" />
+    <Content Include="AdminSide\AdminTemplate\css\fullcalendar.css" />
+    <Content Include="AdminSide\AdminTemplate\css\jquery.easy-pie-chart.css" />
+    <Content Include="AdminSide\AdminTemplate\css\jquery.gritter.css" />
+    <Content Include="AdminSide\AdminTemplate\css\matrix-login.css" />
+    <Content Include="AdminSide\AdminTemplate\css\matrix-media.css" />
+    <Content Include="AdminSide\AdminTemplate\css\matrix-style.css" />
+    <Content Include="AdminSide\AdminTemplate\css\select2.css" />
+    <Content Include="AdminSide\AdminTemplate\css\uniform.css" />
+    <Content Include="AdminSide\AdminTemplate\error403.html" />
+    <Content Include="AdminSide\AdminTemplate\error404.html" />
+    <Content Include="AdminSide\AdminTemplate\error405.html" />
+    <Content Include="AdminSide\AdminTemplate\error500.html" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\css\font-awesome.css" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="AdminSide\AdminTemplate\form-common.html" />
+    <Content Include="AdminSide\AdminTemplate\form-validation.html" />
+    <Content Include="AdminSide\AdminTemplate\form-wizard.html" />
+    <Content Include="AdminSide\AdminTemplate\gallery.html" />
+    <Content Include="AdminSide\AdminTemplate\grid.html" />
+    <Content Include="AdminSide\AdminTemplate\img\.png" />
+    <Content Include="AdminSide\AdminTemplate\img\breadcrumb.png" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\av1.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\av2.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\av3.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\av4.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\av5.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\demo-image1.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\demo-image2.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\demo-image3.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\envelope.png" />
+    <Content Include="AdminSide\AdminTemplate\img\gallery\imgbox1.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\gallery\imgbox2.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\gallery\imgbox3.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\gallery\imgbox4.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\gallery\imgbox5.jpg" />
+    <Content Include="AdminSide\AdminTemplate\img\glyphicons-halflings-white.png" />
+    <Content Include="AdminSide\AdminTemplate\img\gritter.png" />
+    <Content Include="AdminSide\AdminTemplate\img\hue.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\book.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\cabinet.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\calendar.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\client.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\database.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\download.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\graph.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\home.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\lock.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\mail.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\pdf.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\people.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\piechart.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\search.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\shopping-bag.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\survey.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\tag.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\user.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\wallet.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\16\web.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\book.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\cabinet.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\calendar.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\client.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\dashboard.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\database.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\download.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\graph.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\home.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\lock.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\mail.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\pdf.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\people.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\piechart.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\search.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\shopping-bag.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\survey.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\tag.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\user.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\wallet.png" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\web.png" />
+    <Content Include="AdminSide\AdminTemplate\img\larrow.png" />
+    <Content Include="AdminSide\AdminTemplate\img\line.png" />
+    <Content Include="AdminSide\AdminTemplate\img\logo.png" />
+    <Content Include="AdminSide\AdminTemplate\img\menu-active.png" />
+    <Content Include="AdminSide\AdminTemplate\img\rarrow.png" />
+    <Content Include="AdminSide\AdminTemplate\img\saturation.png" />
+    <Content Include="AdminSide\AdminTemplate\img\select2.png" />
+    <Content Include="AdminSide\AdminTemplate\img\spinner.gif" />
+    <Content Include="AdminSide\AdminTemplate\img\sprite.png" />
+    <Content Include="AdminSide\AdminTemplate\index.html" />
+    <Content Include="AdminSide\AdminTemplate\index2.html" />
+    <Content Include="AdminSide\AdminTemplate\interface.html" />
+    <Content Include="AdminSide\AdminTemplate\invoice.html" />
+    <Content Include="AdminSide\AdminTemplate\js\bootstrap-colorpicker.js" />
+    <Content Include="AdminSide\AdminTemplate\js\bootstrap-datepicker.js" />
+    <Content Include="AdminSide\AdminTemplate\js\bootstrap-wysihtml5.js" />
+    <Content Include="AdminSide\AdminTemplate\js\bootstrap.js" />
+    <Content Include="AdminSide\AdminTemplate\js\bootstrap.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\excanvas.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\fullcalendar.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.dataTables.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.easy-pie-chart.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.flot.crosshair.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.flot.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.flot.pie.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.flot.pie.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.flot.resize.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.flot.stack.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.gritter.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.peity.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.ui.custom.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.uniform.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.validate.js" />
+    <Content Include="AdminSide\AdminTemplate\js\jquery.wizard.js" />
+    <Content Include="AdminSide\AdminTemplate\js\masked.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.calendar.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.charts.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.chat.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.dashboard.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.form_common.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.form_validation.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.interface.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.login.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.popover.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.tables.js" />
+    <Content Include="AdminSide\AdminTemplate\js\matrix.wizard.js" />
+    <Content Include="AdminSide\AdminTemplate\js\select2.min.js" />
+    <Content Include="AdminSide\AdminTemplate\js\wysihtml5-0.3.0.js" />
+    <Content Include="AdminSide\AdminTemplate\login.html" />
+    <Content Include="AdminSide\AdminTemplate\tables.html" />
+    <Content Include="AdminSide\AdminTemplate\widgets.html" />
+    <Content Include="AdminSide\LoginAdmin.aspx" />
+    <Content Include="AdminSide\MainBannerLst.aspx" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
@@ -126,6 +273,7 @@
     <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="ClientSide\AboutUs.aspx" />
     <Content Include="ClientSide\Contactus.aspx" />
     <Content Include="ClientSide\Default.aspx" />
     <Content Include="CommingSoonTemp\index.html" />
@@ -144,6 +292,7 @@
     </Content>
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Template\17.png" />
+    <Content Include="Template\assets\css\RoadMap\roadMapCss.css" />
     <Content Include="Template\assets\fonts\fontawesome-webfont.eot" />
     <Content Include="Template\assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="Template\assets\fonts\fontawesome-webfont.woff" />
@@ -168,6 +317,21 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\PatelTeaSource.csprojResolveAssemblyReference.cache" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\FontAwesome.otf" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="AdminSide\AdminTemplate\font-awesome\font\FontAwesome.otf" />
+    <Content Include="AdminSide\AdminTemplate\img\demo\Thumbs.db" />
+    <Content Include="AdminSide\AdminTemplate\img\icons\32\Thumbs.db" />
+    <Content Include="AdminSide\AdminTemplate\img\logo.p" />
+    <Content Include="AdminSide\AdminTemplate\img\logo.pn" />
+    <Content Include="AdminSide\AdminTemplate\img\Thumbs.db" />
+    <Content Include="AdminSide\AdminTemplate\_config.yml" />
+    <Content Include="AdminSide\MasterAdmin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -282,6 +446,7 @@
     <Content Include="Template\images\blog\img-8.jpg" />
     <Content Include="Template\images\blog\img-9.jpg" />
     <Content Include="Template\images\contact\contact.jpg" />
+    <Content Include="Template\images\Degalig_500g.png" />
     <Content Include="Template\images\Download\Darjeeling-Leaf-Tea.jpg" />
     <Content Include="Template\images\Download\Gold-CTC-Orthodox-Blend-Image_6-600x600.jpg" />
     <Content Include="Template\images\Download\img-1.png" />
@@ -289,6 +454,7 @@
     <Content Include="Template\images\Download\img-3.png" />
     <Content Include="Template\images\Download\info-img-2.png" />
     <Content Include="Template\images\Download\info-img-3.png" />
+    <Content Include="Template\images\Download\wsBack.jpg" />
     <Content Include="Template\images\galleries\galleries.jpg" />
     <Content Include="Template\images\galleries\img-1.jpg" />
     <Content Include="Template\images\galleries\img-10.jpg" />
@@ -320,6 +486,7 @@
     <Content Include="Template\images\gallery\img-7.jpg" />
     <Content Include="Template\images\gallery\img-8.jpg" />
     <Content Include="Template\images\gallery\img-9.jpg" />
+    <Content Include="Template\images\green-tea-leaf-png-3.png" />
     <Content Include="Template\images\home\gallery\img-1.jpg" />
     <Content Include="Template\images\home\gallery\img-2.jpg" />
     <Content Include="Template\images\home\gallery\img-3.jpg" />
@@ -358,6 +525,7 @@
     <Content Include="Template\images\home\video-2.jpg" />
     <Content Include="Template\images\info-img-1.png" />
     <Content Include="Template\images\info-img-2.png" />
+    <Content Include="Template\images\JD_250g.png" />
     <Content Include="Template\images\mega-menu\mega-menu.jpg" />
     <Content Include="Template\images\menus\br-1.png" />
     <Content Include="Template\images\menus\br-2.png" />
@@ -391,6 +559,7 @@
     <Content Include="Template\images\menus\tea-3.png" />
     <Content Include="Template\images\menus\tea-4.png" />
     <Content Include="Template\images\paralax-right.png" />
+    <Content Include="Template\images\screenshots\info-img-1.png" />
     <Content Include="Template\images\screenshots\style_v1.jpg" />
     <Content Include="Template\images\screenshots\style_v2.jpg" />
     <Content Include="Template\images\screenshots\style_v3.jpg" />
@@ -413,7 +582,42 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminSide\AddBanner.aspx.cs">
+      <DependentUpon>AddBanner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\AddBanner.aspx.designer.cs">
+      <DependentUpon>AddBanner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\LoginAdmin.aspx.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\LoginAdmin.aspx.designer.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\MainBannerLst.aspx.cs">
+      <DependentUpon>MainBannerLst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\MainBannerLst.aspx.designer.cs">
+      <DependentUpon>MainBannerLst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\MasterAdmin.Master.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\MasterAdmin.Master.designer.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ClientSide\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientSide\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClientSide\Client.Master.cs">
       <DependentUpon>Client.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -474,6 +678,19 @@
     <Folder Include="Template\style-v1\" />
     <Folder Include="Template\style-v3\" />
     <Folder Include="Template\style-v4\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PatelTeaSource.Data\PatelTeaSource.Data.csproj">
+      <Project>{25675003-c506-4de2-8b3f-3462479ca1f4}</Project>
+      <Name>PatelTeaSource.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PatelTeaSource.Domain\PatelTeaSource.Domain.csproj">
+      <Project>{a19e2fcd-8e77-4fcf-a070-f5168a956943}</Project>
+      <Name>PatelTeaSource.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

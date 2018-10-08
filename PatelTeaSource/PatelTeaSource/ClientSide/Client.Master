@@ -5,8 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Patel Tea Packers</title>
-
-
+  
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" rel="stylesheet"
@@ -43,7 +42,7 @@
                         <!-- Logo -->
                         <div id="logo" class="logo">
                             <a href="Default.aspx">
-                                <img alt="The Retation" src="../Template/17.png" /></a>
+                                <img alt="Patel Tea Packers" src="../Template/17.png" /></a>
                         </div>
 
                         <!-- Main Menu -->
@@ -61,11 +60,11 @@
                                 </div>
                                 <div id="navbar" class="navbar-collapse collapse">
                                     <ul class="nav navbar-nav">
-                                        <li class="active"><a href="Default.aspx">Home</a></li>
-                                        <li><a href="../CommingSoonTemp/index.html">About</a></li>
-                                        <li><a href="../CommingSoonTemp/index.html">Products</a></li>
-                                        <li><a href="../CommingSoonTemp/index.html">Quality</a></li>
-                                        <li><a href="../CommingSoonTemp/index.html">Awards</a></li>
+                                        <li id="li_Home" class="active"><a href="Default.aspx" onclick="makeChange(1)">Home</a></li>
+                                        <li id="li_Abt"><a href="AboutUs.aspx" onclick="makeChange(2)" id="abt">About</a></li>
+                                        <li id="li_Products"><a href="../CommingSoonTemp/index.html" onclick="makeChange(3)">Products</a></li>
+                                        <li id="li_Quality"><a href="../CommingSoonTemp/index.html" onclick="makeChange(4)">Quality</a></li>
+                                        <li id="li_Awards"><a href="../CommingSoonTemp/index.html" onclick="makeChange(5)">Awards</a></li>
                                         <%--<li><a href="menu.html">Menu</a>
                                         <div class="mega-menu">
                                             <div class="mega-menu-inner">
@@ -109,8 +108,8 @@
                                             </ul>
                                         </div>
                                     </li>--%>
-                                        <li><a href="Contactus.aspx">Contacts Us</a></li>
-                                        <li><a href="../CommingSoonTemp/index.html">Where to buy</a></li>
+                                        <li id="li_ContactUs"><a href="Contactus.aspx" onclick="makeChange(6)">Contacts Us</a></li>
+                                        <li id="li_WhereToBuy"><a href="../CommingSoonTemp/index.html" onclick="makeChange(7)">Where to buy</a></li>
                                     </ul>
                                 </div>
                                 <!--/.navbar-collapse -->
@@ -193,6 +192,7 @@
                                             </p>
                                             <p>
                                                 <button class="hvr-shutter-out-horizontal">Subscribe</button>
+                                              
                                             </p>
                                         </form>
                                     </div>
@@ -255,3 +255,82 @@
     <script src="../Template/assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+<script>
+    $("#anchorTag").click(function () {
+        
+    });
+
+
+    function makeChange(ancType) {
+        if (ancType == 1) {
+            $("#li_Home").addClass("active");
+            $("#li_Abt").removeClass("active");
+            $("#li_Products").removeClass("active");
+            $("#li_Quality").removeClass("active");
+            $("#li_Awards").removeClass("active");
+            $("#li_ContactUs").removeClass("active");
+            $("#li_WhereToBuy").removeClass("active");
+        }
+        else if (ancType == 2) {
+            $("#li_Home").removeClass("active");
+            $("#li_Abt").addClass("active");
+            $("#li_Products").removeClass("active");
+            $("#li_Quality").removeClass("active");
+            $("#li_Awards").removeClass("active");
+            $("#li_ContactUs").removeClass("active");
+            $("#li_WhereToBuy").removeClass("active");
+        }
+        else if (ancType == 3) {
+            $("#li_Home").removeClass("active");
+            $("#li_Abt").removeClass("active");
+            $("#li_Products").addClass("active");
+            $("#li_Quality").removeClass("active");
+            $("#li_Awards").removeClass("active");
+            $("#li_ContactUs").removeClass("active");
+            $("#li_WhereToBuy").removeClass("active");
+        }
+
+        else if (ancType == 4) {
+            $("#li_Home").removeClass("active");
+            $("#li_Abt").removeClass("active");
+            $("#li_Products").removeClass("active");
+            $("#li_Quality").addClass("active");
+            $("#li_Awards").removeClass("active");
+            $("#li_ContactUs").removeClass("active");
+            $("#li_WhereToBuy").removeClass("active");
+        }
+        else if (ancType == 5) {
+            $("#li_Home").removeClass("active");
+            $("#li_Abt").removeClass("active");
+            $("#li_Products").removeClass("active");
+            $("#li_Quality").removeClass("active");
+            $("#li_Awards").addClass("active");
+            $("#li_ContactUs").removeClass("active");
+            $("#li_WhereToBuy").removeClass("active");
+        }
+        else if (ancType == 6) {
+            $("#li_Home").removeClass("active");
+            $("#li_Abt").removeClass("active");
+            $("#li_Products").removeClass("active");
+            $("#li_Quality").removeClass("active");
+            $("#li_Awards").removeClass("active");
+            $("#li_ContactUs").addClass("active");
+            $("#li_WhereToBuy").removeClass("active");
+        }
+        else if (ancType == 7) {
+            $("#li_Home").removeClass("active");
+            $("#li_Abt").removeClass("active");
+            $("#li_Products").removeClass("active");
+            $("#li_Quality").removeClass("active");
+            $("#li_Awards").removeClass("active");
+            $("#li_ContactUs").removeClass("active");
+            $("#li_WhereToBuy").addClass("active");
+        }
+
+      //  $(this).css('active');
+    }
+
+</script>

@@ -2036,6 +2036,7 @@
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+    width: 104px;
 }
 .hvr-shutter-out-horizontal:before {
   content: "";

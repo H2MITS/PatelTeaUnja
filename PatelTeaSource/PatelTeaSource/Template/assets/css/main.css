@@ -571,27 +571,27 @@ h1.title{
 	margin: -1.5px 0 0 -8.5px;
 }
 #services-item li:nth-child(6n+1){
-    left: 15%;
-    top: 10%;
+    left: -14%;
+    top: 20%;
 }
 #services-item li:nth-child(6n+2){
 	background: hsl(19, 63%, 50%);
-    left: 30%;
-    top: 45%;
+    left: 7%;
+    top: 60%;
 }
 #services-item li:nth-child(6n+3){
 	background: hsl(11, 94%, 65%) none repeat scroll 0 0 !important;
-    top: 15%;
+    top: 5%;
 }
 #services-item li:nth-child(6n+4){
     background: hsl(33, 100%, 50%) none repeat scroll 0 0 !important;
-    left: 65%;
-    top: 40%;
+    left: 89%;
+    top: 60%;
 }
 #services-item li:nth-child(6n+5){
     background: hsl(15, 45%, 28%) none repeat scroll 0 0 !important;
-	left: 80%;
-    top: 10%;
+	left: 110%;
+    top: 20%;
 }
 #services-item li:nth-child(6n+6){
     background: hsl(203, 65%, 77%) none repeat scroll 0 0 !important;

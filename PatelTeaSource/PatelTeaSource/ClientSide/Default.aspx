@@ -471,5 +471,87 @@
 
           </section>
 
-     
+      <section id="bulletproof12" class="section bulletproof" style="padding: 25px 0 20px !important";>
+
+        <div class="container">
+            
+           <div class="col-sm-12" style="text-align:center;margin-top:-13px">
+                    <h1 class="title line-title">" 5 Reasons to drink more Tea "<i class="fa">&#xf111;</i>
+                    </h1>
+                </div>
+            </div>
+          </section>
+	<section id="services" class="section services"
+				style="background-image: url(../Template/images/Download/wsBack.jpg); background-repeat: no-repeat; background-position: center top; background-size: 100% auto;">
+			 
+        <div class="container">
+					<!-- 
+					<ul class="service-effect">
+						<li><img alt="" src="../images/home/services/service-1.png"  class="animated animation-duration-15" data-animate="fadeInLeft animation"></li>
+						<li><img alt="" src="../images/home/services/service-2.png"  class="animated animation-duration-15" data-animate="fadeInDown animation"></li>
+						<li><img alt="" src="../images/home/services/service-3.png"  class="animated animation-duration-15" data-animate="fadeInDown animation"></li>
+						<li><img alt="" src="../images/home/services/service-4.png"  class="animated animation-duration-15" data-animate="fadeInDown animation"></li>
+						<li><img alt="" src="../images/home/services/service-5.png"  class="animated animation-duration-15" data-animate="fadeInDown animation"></li>
+						<li><img alt="" src="../images/home/services/service-6.png"  class="animated animation-duration-15" data-animate="fadeInRight animation"></li>
+					</ul>-->
+					<ul id="services-item">
+						<li class="service">
+							<aside>
+								<div class="service-inner">
+									<h3>
+										 Antioxidants
+									</h3>
+									<p>Teas of all varieties contains high levels of antioxidants polyphenols.</p>
+								</div>
+							</aside>
+							<em class="animated animation infinite bullets"></em>
+						</li>
+						<li class="service">
+							<aside>
+								<div class="service-inner">
+									<h3>
+									Less Caffine Than Coffee
+									</h3>
+									<p>Coffee usually has two to three times the caffeine of tea.</p>
+								</div>
+							</aside>
+							<em class="animated animation infinite bullets animation-delay-50"></em>
+						</li>
+						<li class="service">
+							<aside>
+								<div class="service-inner">
+									<h3>
+										Calorie Free
+									</h3>
+									<p>Drinking tea in place of high calorie beverages can help you loose weight.</p>
+								</div>
+							</aside>
+							<em class="animated animation infinite bullets animation-delay-100"></em>
+						</li>
+						<li class="service">
+							<aside>
+								<div class="service-inner">
+									<h3>
+										Aids In Digestion
+									</h3>
+									<p>Due to the high levels of tunnins it contains, tea makes a great after-meal digestive</p>
+								</div>
+							</aside>
+							<em class="animated animation infinite bullets animation-delay-150"></em>
+						</li>
+						<li class="service">
+							<aside>
+								<div class="service-inner">
+									<h3>
+										Hydrating to the body
+									</h3>
+									<p>Despite the caffeine, tea can help you hydrated.</p>
+								</div>
+							</aside>
+							<em class="animated animation infinite bullets animation-delay-200"></em>
+						</li>
+						 
+					</ul>
+				</div>
+			</section>
 </asp:Content>
