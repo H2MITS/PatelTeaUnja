@@ -30,6 +30,11 @@ background-color: white;
 
 border: 1px solid;
 }
+.btnCss:hover {
+    background-color: orange;
+    color:white;
+    
+}
 
 body.loadpage{}
 body:before{

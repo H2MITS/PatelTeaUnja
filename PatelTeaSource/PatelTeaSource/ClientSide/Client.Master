@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Patel Tea Packers</title>
   
+      <link rel="shortcut icon" type="image/png" href="../../Template/images/green-tea-leaf-png-3.png" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" rel="stylesheet"

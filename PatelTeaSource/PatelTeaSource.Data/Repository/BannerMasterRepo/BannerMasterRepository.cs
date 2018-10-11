@@ -8,10 +8,10 @@ namespace PatelTeaSource.Data.Repository.BannerMasterRepo
 {
     public class BannerMasterRepository : IBannerMasterRepository
     {
-        PatelteaEntities _entities;
+        patelteaEntities _entities;
         public BannerMasterRepository()
         {
-            _entities = new PatelteaEntities();
+            _entities = new patelteaEntities();
         }
         public long Add(banner_master bannerMaster)
         {
@@ -29,9 +29,7 @@ namespace PatelTeaSource.Data.Repository.BannerMasterRepo
         public IQueryable<banner_master> SelectByBannerID(long ID)
         {
             return _entities.banner_master.Where(x => x.banner_id == ID);
-        }
-
-        
+        } 
         public IQueryable<banner_master> SelectAll()
         {
             return _entities.banner_master;

@@ -9,7 +9,7 @@ namespace PatelTeaSource.Domain.ViewModel
     {
         public int RowId { get; set; }
         public long Banner_id { get; set; }
-        public byte[] BannerImg { get; set; }
+        public string BannerImg { get; set; }
         public string BannerHeader { get; set; }
         public string BannerDesc { get; set; }
         public Nullable<int> Status { get; set; }

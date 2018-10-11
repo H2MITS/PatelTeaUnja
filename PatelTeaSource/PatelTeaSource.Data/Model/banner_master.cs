@@ -15,7 +15,7 @@ namespace PatelTeaSource.Data.Model
     public partial class banner_master
     {
         public long banner_id { get; set; }
-        public byte[] bannerImg { get; set; }
+        public string bannerImg { get; set; }
         public string bannerHeader { get; set; }
         public string bannerDesc { get; set; }
         public Nullable<int> status { get; set; }

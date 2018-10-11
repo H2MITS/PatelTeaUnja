@@ -45,14 +45,20 @@
     <!-- Banner -->
     <div id="banner">
         <div class="slider-wrapper">
-            <div class="nivoSlider">
+
+            <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+
+            <%--<div class="nivoSlider">
                 <img src="../Template/images/slider-5.jpg" alt=""
                     title="#nivoCaption-1" />
-
+ 
                 <img
                     src="../Template/images/SLIFER.jpeg" alt="" title="#nivoCaption-3" />
                 <img src="../Template/images/slider-6.jpg"
                     alt="" title="#nivoCaption-2" />
+                 <img src="../Template/images/slider-6.jpg"
+                    alt="" title="#nivoCaption-2" /> 
+                 
             </div>
             <div id="nivoCaption-1" class="nivo-html-caption">
                 <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right">
@@ -65,8 +71,10 @@
 								from the best estate in the world
                     </p>
                 </div>
-            </div>
-            <div id="nivoCaption-3" class="nivo-html-caption">
+            </div>--%>
+
+
+            <%--<div id="nivoCaption-3" class="nivo-html-caption">
                 <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right;">
                     <h1 class="line-title title animated animation-delay-30"
                         data-animate="fadeInUp" style="color: black">TEA AS IT NATURALLY SHOULD BE<i class="fa">&#xf111;</i>
@@ -90,7 +98,18 @@
                     </p>
                 </div>
             </div>
-
+             <div id="nivoCaption-4" class="nivo-html-caption">
+                <div class="nivo-caption-content" style="right: 5% !important; left: 0 !important; text-align: right">
+                    <h1 class="line-title title animated animation-delay-30"
+                        data-animate="fadeInUp">EXPLORE THE WORLD OF PATEL TEA<i class="fa">&#xf111;</i>
+                    </h1>
+                    <p class="desc animated animation-delay-50"
+                        data-animate="fadeInUp">
+                        We only Select tea,
+								from the best estate in the world
+                    </p>
+                </div>
+            </div>--%>
         </div>
     </div>
 </asp:Content>
@@ -301,6 +320,212 @@
         </div>
 
     </section>--%>
+
+    <%---------------------------------------------------------------------------------------------------------%>
+
+
+			 <div class="page-content">
+				<div id="galleries" class="galleries galleries-v1">
+					<div class="container">
+						<div id="filter" class="filter">
+							<button class="button active" data-filter="*">All</button>
+							<button class="button" data-filter=".coffee">Coffee</button>
+							<button class="button" data-filter=".cocktail">Cocktail</button>
+							<button class="button" data-filter=".tea">Tea</button>
+							<button class="button" data-filter=".milk">Milk</button>
+							<button class="button" data-filter=".beverages">Beverages</button>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee milk tea">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../Template/images/galleries/img-1.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../Template/ajax/gallery-v1-1.html"></a>
+											<div class="gallery-icon">
+												<%--<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>--%>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Consectetur adipiscing elit</a></h4>
+								</div>
+							</div>
+							
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail tea beverages">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-2.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Justo euismod faucibs eleifend</a></h4>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee tea milk">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-3.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Inventore veritatis quasi</a></h4>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee milk tea beverages">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-4.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Voluptatem sequi nesciun</a></h4>
+								</div>
+							</div>
+							
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail tea beverages">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-5.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Justo euismod faucibs eleifend</a></h4>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail tea milk">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-6.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Perspiciatis unde omnis</a></h4>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee tea beverages">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-7.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Omnis iste natus error</a></h4>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail milk beverages">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-8.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Eaque ipsa quae</a></h4>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee tea">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-9.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Quasi architecto beatae</a></h4>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail milk beverages">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-10.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Magni dolores eos</a></h4>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee tea beverages">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-11.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Aspernatur aut odit aut</a></h4>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail milk tea beverages">
+								<div class="inner">
+									<figure>
+										<img alt="" src="../images/galleries/img-12.jpg">
+										<figcaption>
+											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
+											<div class="gallery-icon">
+												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
+												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
+											</div>
+										</figcaption>
+									</figure>
+									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Ratione voluptatem</a></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+    <%----------------------------------------------------------------------------------------------------------------%>
+
 
     <section id="latest" class="section bulletproof" style="padding: 25px 0 50px !important";>
 
