@@ -13,9 +13,9 @@ namespace PatelTeaSource.AdminSide.Forms
     {
 
         int passedId = 0;
-        
-      public AddDistributers()
-          : this(new DistributerMasterRepository())
+
+        public AddDistributers()
+            : this(new DistributerMasterRepository())
         {
         }
 
@@ -27,66 +27,84 @@ namespace PatelTeaSource.AdminSide.Forms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["id"] != null)
+            try
             {
-                passedId = Convert.ToInt32(Request.QueryString["id"].ToString());
-
-                if (passedId >= 0)
+                if (!IsPostBack)
                 {
-                    var databyid = _iDistributerMasterRepository.SelectById(passedId);
-                    if (databyid != null)
+                    if (Request.QueryString["id"] != null)
                     {
-                        txtFirmName.Text = databyid.name.Trim().ToString();
-                        txtOwnerName.Text = databyid.ownername.Trim().ToString();
-                        txtFullAdd.Text = databyid.name.Trim().ToString();
-                        txtPincode.Text = databyid.pincode.Trim().ToString();
-                        txtEmail.Text = databyid.email.Trim();
-                        txtContact.Text = databyid.contactno.Trim().ToString();
-                        txtCity.Text = databyid.city.Trim().ToString();
+                        passedId = Convert.ToInt32(Request.QueryString["id"].ToString());
 
-                        btnSubmit.Text = "Update";
+                        if (passedId >= 0)
+                        {
+                            var databyid = _iDistributerMasterRepository.SelectById(passedId);
+                            if (databyid != null)
+                            {
+                                txtFirmName.Text = databyid.name.Trim().ToString();
+                                txtOwnerName.Text = databyid.ownername.Trim().ToString();
+                                txtFullAdd.Text = databyid.name.Trim().ToString();
+                                txtPincode.Text = databyid.pincode.Trim().ToString();
+                                txtEmail.Text = databyid.email.Trim();
+                                txtContact.Text = databyid.contactno.Trim().ToString();
+                                txtCity.Text = databyid.city.Trim().ToString();
+
+                                btnSubmit.Text = "Update";
+                            }
+
+                        }
                     }
-
                 }
+            }
+            catch (Exception x)
+            {
+                Response.Write("<script>alert('" + x.ToString() + "')</script>");
             }
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (btnSubmit.Text == "Submit")
-            {
-
-                distibuter_master distMaster = new distibuter_master();
-
-                distMaster.name = txtFirmName.Text.Trim().ToString();
-                distMaster.ownername = txtOwnerName.Text.Trim().ToString();
-                distMaster.contactno = txtContact.Text.Trim();
-                distMaster.fulladdress = txtFullAdd.Text.Trim().ToString();
-                distMaster.pincode = txtPincode.Text.Trim();
-                distMaster.email = txtEmail.Text.Trim().ToString();
-                distMaster.city= txtCity.Text.Trim().ToString();
-                distMaster.cdate = DateTime.Now;
-
-                _iDistributerMasterRepository.Add(distMaster);
-            }
-            else
-            {
-                var databyid = _iDistributerMasterRepository.SelectById(passedId);
-                if (databyid != null)
+            try
+            { 
+                if (btnSubmit.Text == "Submit")
                 {
-                    databyid.name = txtFirmName.Text.Trim().ToString();
-                    databyid.ownername = txtOwnerName.Text.Trim().ToString();
-                    databyid.contactno = txtContact.Text.Trim();
-                    databyid.fulladdress = txtFullAdd.Text.Trim().ToString();
-                    databyid.pincode = txtPincode.Text.Trim();
-                    databyid.email = txtEmail.Text.Trim().ToString();
-                    databyid.udate = DateTime.Now;
-                    databyid.city = txtCity.Text.Trim().ToString();
 
-                    _iDistributerMasterRepository.Update(databyid);
+                    distibuter_master distMaster = new distibuter_master();
+
+                    distMaster.name = txtFirmName.Text.Trim().ToString();
+                    distMaster.ownername = txtOwnerName.Text.Trim().ToString();
+                    distMaster.contactno = txtContact.Text.Trim();
+                    distMaster.fulladdress = txtFullAdd.Text.Trim().ToString();
+                    distMaster.pincode = txtPincode.Text.Trim();
+                    distMaster.email = txtEmail.Text.Trim().ToString();
+                    distMaster.city = txtCity.Text.Trim().ToString();
+                    distMaster.cdate = DateTime.Now;
+
+                    _iDistributerMasterRepository.Add(distMaster);
                 }
+                else
+                {
+                    passedId = Convert.ToInt32(Request.QueryString["id"].ToString());
+                    var databyid = _iDistributerMasterRepository.SelectById(passedId);
+                    if (databyid != null)
+                    {
+                        databyid.name = txtFirmName.Text.Trim().ToString();
+                        databyid.ownername = txtOwnerName.Text.Trim().ToString();
+                        databyid.contactno = txtContact.Text.Trim();
+                        databyid.fulladdress = txtFullAdd.Text.Trim().ToString();
+                        databyid.pincode = txtPincode.Text.Trim();
+                        databyid.email = txtEmail.Text.Trim().ToString();
+                        databyid.udate = DateTime.Now;
+                        databyid.city = txtCity.Text.Trim().ToString();
+
+                        _iDistributerMasterRepository.Update(databyid);
+                    }
+                }
+                Response.Redirect("DistributerLst.aspx");
             }
-            Response.Redirect("DistributerLst.aspx");
+            catch (Exception x)
+            {
+                Response.Write("<script>alert('" + x.ToString() + "')</script>");
+            }
         }
     }
 }

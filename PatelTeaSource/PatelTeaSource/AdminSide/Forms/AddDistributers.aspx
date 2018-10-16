@@ -54,45 +54,51 @@
                                             <div class="form-group">
                                                  
                                                 <label for="complaintinput1">Firm Name:</label>
-                                                <asp:TextBox ID="txtFirmName" Height="30" CssClass="form-control round" placeholder="Firm Name" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtFirmName" Height="30" CssClass="form-control" placeholder="Firm Name" runat="server" required></asp:TextBox>
 
                                             </div>
                                             <div class="form-group">
                                                  
                                                 <label for="complaintinput1">Owner Name:</label>
-                                                <asp:TextBox ID="txtOwnerName" Height="30" CssClass="form-control round" placeholder="Owner Name" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtOwnerName" Height="30" CssClass="form-control" placeholder="Owner Name" runat="server" required></asp:TextBox>
 
                                             </div>
                                             <div class="form-group">
 
                                                 <label for="complaintinput1">Full Address:</label>
-                                                <asp:TextBox ID="txtFullAdd" TextMode="MultiLine" row="5" Height="30" CssClass="form-control round" placeholder="Address.." runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtFullAdd" TextMode="MultiLine" row="5" Height="30" CssClass="form-control" placeholder="Address.." runat="server" required></asp:TextBox>
 
                                             </div>
                                             <div class="form-group">
 
                                                 <label for="complaintinput1">City:</label>
-                                                <asp:TextBox ID="txtCity" Height="30" CssClass="form-control round" placeholder="City" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtCity" Height="30" CssClass="form-control" placeholder="City" runat="server" required></asp:TextBox>
+
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label for="complaintinput1">State:</label>
+                                                <asp:TextBox ID="txtState" Height="30" CssClass="form-control" placeholder="State" runat="server" required></asp:TextBox>
 
                                             </div>
                                            
                                             <div class="form-group">
 
                                                 <label for="complaintinput1">Pin-Code::</label>
-                                                <asp:TextBox ID="txtPincode" Height="30" CssClass="form-control round" TextMode="Number" placeholder="0" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPincode" Height="30" CssClass="form-control" TextMode="Number" placeholder="0" runat="server" required></asp:TextBox>
 
                                             </div>
                                             <div class="form-group">
 
                                                 <label for="complaintinput1">Contact Number:</label>
-                                                <asp:TextBox ID="txtContact" Height="30" CssClass="form-control round" TextMode="Number" placeholder="0" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtContact" Height="30" CssClass="form-control" TextMode="Number" placeholder="0" runat="server" required></asp:TextBox>
 
                                             </div>
 
                                              <div class="form-group">
 
                                                 <label for="complaintinput1">Email:</label>
-                                                <asp:TextBox ID="txtEmail" Height="30" CssClass="form-control round" TextMode="Email" placeholder="abc@gmail.com" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtEmail" Height="30" CssClass="form-control" TextMode="Email" placeholder="abc@gmail.com" runat="server" required></asp:TextBox>
 
                                             </div>
 
@@ -115,18 +121,7 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
+     
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="foter" runat="server">
 
@@ -142,6 +137,8 @@
             var txtPincode = $("#" + "<%= txtPincode.ClientID %>");
             var txtContact = $("#" + "<%= txtContact.ClientID %>");
             var txtEmail = $("#" + "<%= txtEmail.ClientID %>");
+            var txtState = $("#" + "<%= txtState.ClientID %>");
+            
 
             txtFirmName.val("");
             txtOwnerName.val("");
@@ -150,6 +147,8 @@
             txtContact.val("");
             txtEmail.val("");
             txtFullAdd.val("");
+            txtState.val("");
+            
         }
     </script>
 

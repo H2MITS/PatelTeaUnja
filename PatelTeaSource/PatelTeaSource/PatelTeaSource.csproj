@@ -1772,6 +1772,8 @@
     <Content Include="AdminSide\AdminSideTemplate\src\js\scripts\popover\popover.js" />
     <Content Include="AdminSide\AdminSideTemplate\src\js\scripts\tooltip\tooltip.js" />
     <Content Include="AdminSide\AdminSideTemplate\src\scss\bootstrap\utilities\_align.html" />
+    <Content Include="AdminSide\Forms\ContactReply.aspx" />
+    <Content Include="AdminSide\Forms\DeleteUser.aspx" />
     <Content Include="AdminSide\Forms\AddAwards.aspx" />
     <Content Include="AdminSide\Forms\AddBanner.aspx" />
     <Content Include="AdminSide\AdminSideData\BannerImages\slider-5.jpg" />
@@ -1786,9 +1788,13 @@
     <Content Include="AdminSide\Forms\DeleteMainBanner.aspx" />
     <Content Include="AdminSide\Forms\DeleteProducts.aspx" />
     <Content Include="AdminSide\Forms\DistributerLst.aspx" />
+    <Content Include="AdminSide\Forms\Login.aspx" />
     <Content Include="AdminSide\Forms\LoginAdmin.aspx" />
+    <Content Include="AdminSide\Forms\Logout.aspx" />
     <Content Include="AdminSide\Forms\MainBannerLst.aspx" />
+    <Content Include="AdminSide\Forms\AddNewUserRegistration.aspx" />
     <Content Include="AdminSide\Forms\ProductsList.aspx" />
+    <Content Include="AdminSide\Forms\RegisteredUsers.aspx" />
     <Content Include="AdminSide\Forms\RespondContactUs.aspx" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
@@ -2156,6 +2162,7 @@
     <Content Include="Template\assets\js\vendor\less.min.js" />
     <Content Include="Template\assets\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
     <Content Include="Template\assets\js\vendor\sticky.min.js" />
+    <Content Include="Template\images\01Copy.png" />
     <Content Include="Template\images\01.png" />
     <Content Include="Template\images\02.png" />
     <Content Include="Template\images\02b0f534c0c0e2249595537e29cbe95e.jpg" />
@@ -2206,13 +2213,20 @@
     <Content Include="Template\images\blog\img-9.jpg" />
     <Content Include="Template\images\contact\contact.jpg" />
     <Content Include="Template\images\Degalig_500g.png" />
+    <Content Include="Template\images\Download\1980.jpg" />
+    <Content Include="Template\images\Download\1990.jpg" />
+    <Content Include="Template\images\Download\1994.jpg" />
+    <Content Include="Template\images\Download\1995.jpg" />
     <Content Include="Template\images\Download\Darjeeling-Leaf-Tea.jpg" />
     <Content Include="Template\images\Download\Gold-CTC-Orthodox-Blend-Image_6-600x600.jpg" />
     <Content Include="Template\images\Download\img-1.png" />
     <Content Include="Template\images\Download\img-2.png" />
     <Content Include="Template\images\Download\img-3.png" />
+    <Content Include="Template\images\Download\index.jpg" />
     <Content Include="Template\images\Download\info-img-2.png" />
     <Content Include="Template\images\Download\info-img-3.png" />
+    <Content Include="Template\images\Download\isocert.JPG" />
+    <Content Include="Template\images\Download\veg.svg" />
     <Content Include="Template\images\Download\wsBack.jpg" />
     <Content Include="Template\images\galleries\galleries.jpg" />
     <Content Include="Template\images\galleries\img-1.jpg" />
@@ -2341,6 +2355,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminSide\Forms\ContactReply.aspx.cs">
+      <DependentUpon>ContactReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\Forms\ContactReply.aspx.designer.cs">
+      <DependentUpon>ContactReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\Forms\DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\Forms\DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminSide\Forms\AddAwards.aspx.cs">
       <DependentUpon>AddAwards.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2432,12 +2460,26 @@
     <Compile Include="AdminSide\Forms\DistributerLst.aspx.designer.cs">
       <DependentUpon>DistributerLst.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminSide\Forms\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\Forms\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminSide\Forms\LoginAdmin.aspx.cs">
       <DependentUpon>LoginAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminSide\Forms\LoginAdmin.aspx.designer.cs">
       <DependentUpon>LoginAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\Forms\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\Forms\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminSide\Forms\MainBannerLst.aspx.cs">
       <DependentUpon>MainBannerLst.aspx</DependentUpon>
@@ -2446,12 +2488,26 @@
     <Compile Include="AdminSide\Forms\MainBannerLst.aspx.designer.cs">
       <DependentUpon>MainBannerLst.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminSide\Forms\AddNewUserRegistration.aspx.cs">
+      <DependentUpon>AddNewUserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\Forms\AddNewUserRegistration.aspx.designer.cs">
+      <DependentUpon>AddNewUserRegistration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminSide\Forms\ProductsList.aspx.cs">
       <DependentUpon>ProductsList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminSide\Forms\ProductsList.aspx.designer.cs">
       <DependentUpon>ProductsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSide\Forms\RegisteredUsers.aspx.cs">
+      <DependentUpon>RegisteredUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSide\Forms\RegisteredUsers.aspx.designer.cs">
+      <DependentUpon>RegisteredUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminSide\Forms\RespondContactUs.aspx.cs">
       <DependentUpon>RespondContactUs.aspx</DependentUpon>

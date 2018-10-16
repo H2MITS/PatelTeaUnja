@@ -32,6 +32,9 @@ namespace PatelTeaSource.Data.Model
         public virtual DbSet<feedback_master> feedback_master { get; set; }
         public virtual DbSet<awardsCertificate> awardsCertificates { get; set; }
         public virtual DbSet<offerScheme> offerSchemes { get; set; }
+        public virtual DbSet<NewUserRegister> NewUserRegisters { get; set; }
+        public virtual DbSet<userLogin> userLogins { get; set; }
+        public virtual DbSet<ProductPrice> ProductPrices { get; set; }
         public virtual DbSet<product_master> product_master { get; set; }
     }
 }

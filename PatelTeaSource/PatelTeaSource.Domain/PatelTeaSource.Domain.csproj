@@ -113,11 +113,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\MailClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\AwardsVM.cs" />
     <Compile Include="ViewModel\BannerMasterVM.cs" />
+    <Compile Include="ViewModel\NewUserRegistrationVM.cs" />
     <Compile Include="ViewModel\OfferSchemeVM.cs" />
     <Compile Include="ViewModel\ProductMasterVM.cs" />
+    <Compile Include="ViewModel\UserLoginVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -128,6 +131,7 @@
       <Name>PatelTeaSource.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

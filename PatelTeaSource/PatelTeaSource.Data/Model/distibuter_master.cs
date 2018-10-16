@@ -25,5 +25,6 @@ namespace PatelTeaSource.Data.Model
         public string map { get; set; }
         public Nullable<System.DateTime> cdate { get; set; }
         public Nullable<System.DateTime> udate { get; set; }
+        public string state { get; set; }
     }
 }

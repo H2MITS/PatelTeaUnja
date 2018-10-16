@@ -26,18 +26,27 @@ namespace PatelTeaSource.AdminSide.Forms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            passedId = Convert.ToInt32(Request.QueryString["id"].ToString());
-
-            if (passedId >= 0)
+            try
             {
-                var databyid = _iDistributerMasterRepository.SelectById(passedId);
-                if (databyid != null)
+                if (!IsPostBack)
                 {
-                     
-                    _iDistributerMasterRepository.Delete(passedId);
-                    Response.Redirect("MainBannerLst.aspx");
-                }
+                    passedId = Convert.ToInt32(Request.QueryString["id"].ToString());
 
+                    if (passedId >= 0)
+                    {
+                        var databyid = _iDistributerMasterRepository.SelectById(passedId);
+                        if (databyid != null)
+                        {
+
+                            _iDistributerMasterRepository.Delete(passedId);
+                            Response.Redirect("MainBannerLst.aspx");
+                        }
+                    }
+                }
+            }
+            catch (Exception x)
+            {
+                Response.Write("<script>alert('" + x.ToString() + "')</script>");
             }
         }
     }

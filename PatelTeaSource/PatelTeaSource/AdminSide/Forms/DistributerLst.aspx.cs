@@ -26,44 +26,53 @@ namespace PatelTeaSource.AdminSide.Forms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            int rowNo = 1;
-            var data = _iDistributerMasterRepository.SelectAll();
+            try {
+                if (!IsPostBack)
+                {
+                    int rowNo = 1;
+                    var data = _iDistributerMasterRepository.SelectAll();
 
-            foreach (var item in data)
+                    foreach (var item in data)
+                    {
+                        html = new StringBuilder();
+
+                        html.Append("<tr>");
+                        html.Append("<td>"); html.Append(rowNo); html.Append("</td>");
+                        html.Append("<td>"); html.Append(item.name); html.Append("</td>");
+                        html.Append("<td>"); html.Append(item.city); html.Append("</td>");
+                        html.Append("<td>"); html.Append(item.contactno); html.Append("</td>");
+
+                        html.Append("<td>"); html.Append(Convert.ToDateTime(item.cdate).ToString("dd-MM-yyyy HH:mm:ss")); html.Append("</td>");
+
+                        if (item.udate == null)
+                        {
+                            html.Append("<td style='text-align:center'>"); html.Append("--"); html.Append("</td>");
+
+                        }
+                        else
+                        {
+                            html.Append("<td>"); html.Append(Convert.ToDateTime(item.udate).ToString("dd-MM-yyyy HH:mm:ss")); html.Append("</td>");
+                        }
+                        html.Append("<td>");
+
+                        string hrfEdit = "AddDistributers.aspx?id=" + item.dis_id;
+                        string hrfDelete = "DeleteDistributers.aspx?id=" + item.dis_id;
+
+                        html.Append("<a href='" + hrfEdit + "' class='icon-edit' style='font-size:large'></a> | ");
+                        //html.Append("<a href='" + hrfDelete + "' class='icon-remove' style='font-size:large'></a>  ");
+                        html.Append("<a class='icon-remove' style='font-size:large' onclick='deleteThis(" + item.dis_id + ")'></a>  ");
+
+                        html.Append("</td>");
+                        html.Append("</tr>");
+
+                        rowNo++;
+                        PlaceHolder1.Controls.Add(new Literal { Text = html.ToString() });
+                    }
+                }
+            }
+            catch (Exception x)
             {
-                html = new StringBuilder();
-
-                html.Append("<tr>");
-                html.Append("<td>"); html.Append(rowNo); html.Append("</td>");
-                html.Append("<td>"); html.Append(item.name); html.Append("</td>");
-                html.Append("<td>"); html.Append(item.city); html.Append("</td>");
-                html.Append("<td>"); html.Append(item.contactno); html.Append("</td>");
-
-              html.Append("<td>"); html.Append(Convert.ToDateTime(item.cdate).ToString("dd-MM-yyyy HH:mm:ss")); html.Append("</td>");
-
-                if (item.udate == null)
-                {
-                    html.Append("<td style='text-align:center'>"); html.Append("--"); html.Append("</td>");
-
-                }
-                else
-                {
-                    html.Append("<td>"); html.Append(Convert.ToDateTime(item.udate).ToString("dd-MM-yyyy HH:mm:ss")); html.Append("</td>");
-                }
-                html.Append("<td>");
-
-                string hrfEdit = "AddDistributers.aspx?id=" + item.dis_id;
-                string hrfDelete = "DeleteDistributers.aspx?id=" + item.dis_id;
-
-                html.Append("<a href='" + hrfEdit + "' class='icon-edit' style='font-size:large'></a> | ");
-                //html.Append("<a href='" + hrfDelete + "' class='icon-remove' style='font-size:large'></a>  ");
-                html.Append("<a class='icon-remove' style='font-size:large' onclick='deleteThis(" + item.dis_id + ")'></a>  ");
-
-                html.Append("</td>");
-                html.Append("</tr>");
-
-                rowNo++;
-                PlaceHolder1.Controls.Add(new Literal { Text = html.ToString() });
+                Response.Write("<script>alert('" + x.ToString() + "')</script>");
             }
         }
     }

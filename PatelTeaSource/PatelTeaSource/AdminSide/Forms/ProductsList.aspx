@@ -50,7 +50,7 @@
                                                 <th>Product Name</th>
                                                 <th style="width: 25%;">Image</th>
                                                 <th>Weight</th>
-                                                
+                                                 <th>Price</th>
                                                 <th>Created Date</th>
                                                 <th>Updated Date</th>
                                                 <th style="width:10%">Action</th>

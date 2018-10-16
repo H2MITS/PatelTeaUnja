@@ -51,6 +51,9 @@
           <Property Name="mobile" Type="nvarchar" MaxLength="50" />
           <Property Name="email" Type="nvarchar" MaxLength="50" />
           <Property Name="subject" Type="nvarchar(max)" />
+          <Property Name="message" Type="nvarchar(max)" />
+          <Property Name="reply" Type="nvarchar(max)" />
+          <Property Name="status" Type="int" />
           <Property Name="cdate" Type="datetime" />
           <Property Name="udate" Type="datetime" />
         </EntityType>
@@ -61,6 +64,7 @@
           <Property Name="dis_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" />
           <Property Name="fulladdress" Type="nvarchar(max)" />
+          <Property Name="state" Type="varchar" MaxLength="50" />
           <Property Name="city" Type="nvarchar" MaxLength="50" />
           <Property Name="pincode" Type="nvarchar" MaxLength="50" />
           <Property Name="ownername" Type="nvarchar" MaxLength="50" />
@@ -83,6 +87,21 @@
           <Property Name="udate" Type="datetime" />
           <Property Name="msg" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="NewUserRegister">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="fullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="emailId" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="int" />
+          <Property Name="role" Type="varchar" MaxLength="50" />
+          <Property Name="userType" Type="varchar" MaxLength="50" />
+          <Property Name="cDate" Type="datetime" />
+          <Property Name="uDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="offerScheme">
           <Key>
             <PropertyRef Name="offerId" />
@@ -102,11 +121,31 @@
           <Property Name="pname" Type="nvarchar" MaxLength="50" />
           <Property Name="photo" Type="nvarchar(max)" />
           <Property Name="description" Type="nvarchar(max)" />
-          <Property Name="weight" Type="int" />
+          <Property Name="weight" Type="decimal" Precision="18" Scale="2" />
           <Property Name="unit" Type="char" MaxLength="10" />
           <Property Name="nutritionImg" Type="varchar" MaxLength="150" />
           <Property Name="cDate" Type="datetime" />
           <Property Name="uDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ProductPrice">
+          <Key>
+            <PropertyRef Name="priceId" />
+          </Key>
+          <Property Name="priceId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pId" Type="bigint" />
+          <Property Name="price" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="cDate" Type="datetime" />
+          <Property Name="uDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="userLogin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userId" Type="bigint" />
+          <Property Name="lastLogin" Type="datetime" />
+          <Property Name="createdDate" Type="datetime" />
+          <Property Name="updateDate" Type="datetime" />
         </EntityType>
         <Association Name="FK_offerScheme_product_master">
           <End Role="product_master" Type="Self.product_master" Multiplicity="0..1" />
@@ -120,6 +159,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ProductPrice_product_master">
+          <End Role="product_master" Type="Self.product_master" Multiplicity="0..1" />
+          <End Role="ProductPrice" Type="Self.ProductPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product_master">
+              <PropertyRef Name="p_id" />
+            </Principal>
+            <Dependent Role="ProductPrice">
+              <PropertyRef Name="pId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_userLogin_NewUserRegister">
+          <End Role="NewUserRegister" Type="Self.NewUserRegister" Multiplicity="0..1" />
+          <End Role="userLogin" Type="Self.userLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NewUserRegister">
+              <PropertyRef Name="userId" />
+            </Principal>
+            <Dependent Role="userLogin">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="patelteaModelStoreContainer">
           <EntitySet Name="awardsCertificates" EntityType="Self.awardsCertificates" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="banner_master" EntityType="Self.banner_master" Schema="dbo" store:Type="Tables" />
@@ -127,11 +190,22 @@
           <EntitySet Name="contact_master" EntityType="Self.contact_master" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="distibuter_master" EntityType="Self.distibuter_master" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="feedback_master" EntityType="Self.feedback_master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewUserRegister" EntityType="Self.NewUserRegister" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="offerScheme" EntityType="Self.offerScheme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="product_master" EntityType="Self.product_master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductPrice" EntityType="Self.ProductPrice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="userLogin" EntityType="Self.userLogin" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_offerScheme_product_master" Association="Self.FK_offerScheme_product_master">
             <End Role="product_master" EntitySet="product_master" />
             <End Role="offerScheme" EntitySet="offerScheme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPrice_product_master" Association="Self.FK_ProductPrice_product_master">
+            <End Role="product_master" EntitySet="product_master" />
+            <End Role="ProductPrice" EntitySet="ProductPrice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_userLogin_NewUserRegister" Association="Self.FK_userLogin_NewUserRegister">
+            <End Role="NewUserRegister" EntitySet="NewUserRegister" />
+            <End Role="userLogin" EntitySet="userLogin" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -175,6 +249,9 @@
           <Property Name="subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="cdate" Type="DateTime" Precision="3" />
           <Property Name="udate" Type="DateTime" Precision="3" />
+          <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="reply" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Int32" />
         </EntityType>
         <EntityType Name="distibuter_master">
           <Key>
@@ -191,6 +268,7 @@
           <Property Name="map" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="cdate" Type="DateTime" Precision="3" />
           <Property Name="udate" Type="DateTime" Precision="3" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="feedback_master">
           <Key>
@@ -213,10 +291,21 @@
           <EntitySet Name="feedback_master" EntityType="Self.feedback_master" />
           <EntitySet Name="awardsCertificates" EntityType="patelteaModel.awardsCertificate" />
           <EntitySet Name="offerSchemes" EntityType="patelteaModel.offerScheme" />
+          <EntitySet Name="NewUserRegisters" EntityType="patelteaModel.NewUserRegister" />
+          <EntitySet Name="userLogins" EntityType="patelteaModel.userLogin" />
+          <AssociationSet Name="FK_userLogin_NewUserRegister" Association="patelteaModel.FK_userLogin_NewUserRegister">
+            <End Role="NewUserRegister" EntitySet="NewUserRegisters" />
+            <End Role="userLogin" EntitySet="userLogins" />
+          </AssociationSet>
+          <EntitySet Name="ProductPrices" EntityType="patelteaModel.ProductPrice" />
           <EntitySet Name="product_master" EntityType="patelteaModel.product_master" />
           <AssociationSet Name="FK_offerScheme_product_master" Association="patelteaModel.FK_offerScheme_product_master">
             <End Role="product_master" EntitySet="product_master" />
             <End Role="offerScheme" EntitySet="offerSchemes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPrice_product_master" Association="patelteaModel.FK_ProductPrice_product_master">
+            <End Role="product_master" EntitySet="product_master" />
+            <End Role="ProductPrice" EntitySet="ProductPrices" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="awardsCertificate">
@@ -242,6 +331,56 @@
           <Property Name="uDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="product_master" Relationship="patelteaModel.FK_offerScheme_product_master" FromRole="offerScheme" ToRole="product_master" />
         </EntityType>
+        <EntityType Name="NewUserRegister">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="emailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="userType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cDate" Type="DateTime" Precision="3" />
+          <Property Name="uDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="userLogins" Relationship="patelteaModel.FK_userLogin_NewUserRegister" FromRole="NewUserRegister" ToRole="userLogin" />
+        </EntityType>
+        <EntityType Name="userLogin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userId" Type="Int64" />
+          <Property Name="lastLogin" Type="DateTime" Precision="3" />
+          <Property Name="createdDate" Type="DateTime" Precision="3" />
+          <Property Name="updateDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="NewUserRegister" Relationship="patelteaModel.FK_userLogin_NewUserRegister" FromRole="userLogin" ToRole="NewUserRegister" />
+        </EntityType>
+        <Association Name="FK_userLogin_NewUserRegister">
+          <End Type="patelteaModel.NewUserRegister" Role="NewUserRegister" Multiplicity="0..1" />
+          <End Type="patelteaModel.userLogin" Role="userLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NewUserRegister">
+              <PropertyRef Name="userId" />
+            </Principal>
+            <Dependent Role="userLogin">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ProductPrice">
+          <Key>
+            <PropertyRef Name="priceId" />
+          </Key>
+          <Property Name="priceId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pId" Type="Int64" />
+          <Property Name="price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="cDate" Type="DateTime" Precision="3" />
+          <Property Name="uDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="product_master" Relationship="patelteaModel.FK_ProductPrice_product_master" FromRole="ProductPrice" ToRole="product_master" />
+        </EntityType>
         <EntityType Name="product_master">
           <Key>
             <PropertyRef Name="p_id" />
@@ -250,12 +389,13 @@
           <Property Name="pname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="weight" Type="Int32" />
+          <Property Name="weight" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="unit" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="nutritionImg" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="cDate" Type="DateTime" Precision="3" />
           <Property Name="uDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="offerSchemes" Relationship="patelteaModel.FK_offerScheme_product_master" FromRole="product_master" ToRole="offerScheme" />
+          <NavigationProperty Name="ProductPrices" Relationship="patelteaModel.FK_ProductPrice_product_master" FromRole="product_master" ToRole="ProductPrice" />
         </EntityType>
         <Association Name="FK_offerScheme_product_master">
           <End Type="patelteaModel.product_master" Role="product_master" Multiplicity="0..1" />
@@ -265,6 +405,18 @@
               <PropertyRef Name="p_id" />
             </Principal>
             <Dependent Role="offerScheme">
+              <PropertyRef Name="pId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductPrice_product_master">
+          <End Type="patelteaModel.product_master" Role="product_master" Multiplicity="0..1" />
+          <End Type="patelteaModel.ProductPrice" Role="ProductPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product_master">
+              <PropertyRef Name="p_id" />
+            </Principal>
+            <Dependent Role="ProductPrice">
               <PropertyRef Name="pId" />
             </Dependent>
           </ReferentialConstraint>
@@ -306,6 +458,9 @@
           <EntitySetMapping Name="contact_master">
             <EntityTypeMapping TypeName="patelteaModel.contact_master">
               <MappingFragment StoreEntitySet="contact_master">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="reply" ColumnName="reply" />
+                <ScalarProperty Name="message" ColumnName="message" />
                 <ScalarProperty Name="contact_id" ColumnName="contact_id" />
                 <ScalarProperty Name="fname" ColumnName="fname" />
                 <ScalarProperty Name="mobile" ColumnName="mobile" />
@@ -319,6 +474,7 @@
           <EntitySetMapping Name="distibuter_master">
             <EntityTypeMapping TypeName="patelteaModel.distibuter_master">
               <MappingFragment StoreEntitySet="distibuter_master">
+                <ScalarProperty Name="state" ColumnName="state" />
                 <ScalarProperty Name="dis_id" ColumnName="dis_id" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="fulladdress" ColumnName="fulladdress" />
@@ -368,6 +524,44 @@
                 <ScalarProperty Name="upcoming" ColumnName="upcoming" />
                 <ScalarProperty Name="passedScheme" ColumnName="passedScheme" />
                 <ScalarProperty Name="offerId" ColumnName="offerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewUserRegisters">
+            <EntityTypeMapping TypeName="patelteaModel.NewUserRegister">
+              <MappingFragment StoreEntitySet="NewUserRegister">
+                <ScalarProperty Name="uDate" ColumnName="uDate" />
+                <ScalarProperty Name="cDate" ColumnName="cDate" />
+                <ScalarProperty Name="userType" ColumnName="userType" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="emailId" ColumnName="emailId" />
+                <ScalarProperty Name="fullName" ColumnName="fullName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userLogins">
+            <EntityTypeMapping TypeName="patelteaModel.userLogin">
+              <MappingFragment StoreEntitySet="userLogin">
+                <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+                <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+                <ScalarProperty Name="lastLogin" ColumnName="lastLogin" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductPrices">
+            <EntityTypeMapping TypeName="patelteaModel.ProductPrice">
+              <MappingFragment StoreEntitySet="ProductPrice">
+                <ScalarProperty Name="uDate" ColumnName="uDate" />
+                <ScalarProperty Name="cDate" ColumnName="cDate" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="pId" ColumnName="pId" />
+                <ScalarProperty Name="priceId" ColumnName="priceId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

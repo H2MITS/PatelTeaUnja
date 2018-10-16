@@ -28,22 +28,32 @@ namespace PatelTeaSource.AdminSide
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["id"] != null)
+            try
             {
-                passedId = Convert.ToInt32(Request.QueryString["id"].ToString());
-
-                if (passedId >= 0)
+                if (!IsPostBack)
                 {
-                    var databyid = _iBannerMasterRepository.SelectById(passedId);
-                    if (databyid != null)
+                    if (Request.QueryString["id"] != null)
                     {
-                        txtBannerHead.Text = databyid.bannerHeader.Trim().ToString();
-                        txtDesc.Text = databyid.bannerDesc.Trim().ToString();
+                        passedId = Convert.ToInt32(Request.QueryString["id"].ToString());
 
-                        btnSubmit.Text = "Update";
+                        if (passedId >= 0)
+                        {
+                            var databyid = _iBannerMasterRepository.SelectById(passedId);
+                            if (databyid != null)
+                            {
+                                txtBannerHead.Text = databyid.bannerHeader.Trim().ToString();
+                                txtDesc.Text = databyid.bannerDesc.Trim().ToString();
+
+                                btnSubmit.Text = "Update";
+                            }
+
+                        }
                     }
-
                 }
+            }
+            catch (Exception x)
+            {
+                Response.Write("<script>alert('" + x.ToString() + "')</script>");
             }
         }
 
@@ -65,45 +75,53 @@ namespace PatelTeaSource.AdminSide
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (FileUpload1.HasFile)
+            try
             {
-                string str = FileUpload1.FileName;
-                FileUpload1.PostedFile.SaveAs(Server.MapPath("~/AdminSide/AdminSideData/BannerImages/" + str));
-                string Image = str.ToString();
-                if (!isFileValid())
+                if (FileUpload1.HasFile)
                 {
-                    return;
-                }
-                else
-                {
-                    Label1.Visible = false;
-
-                    if (btnSubmit.Text == "Submit")
+                    string str = FileUpload1.FileName;
+                    FileUpload1.PostedFile.SaveAs(Server.MapPath("~/AdminSide/AdminSideData/BannerImages/" + str));
+                    string Image = str.ToString();
+                    if (!isFileValid())
                     {
-
-                        banner_master banner = new banner_master();
-                        banner.bannerHeader = txtBannerHead.Text.Trim().ToString();
-                        banner.bannerDesc = txtDesc.Text.Trim().ToString();
-                        banner.bannerImg = Image;
-                        banner.cdate = DateTime.Now;
-
-                        _iBannerMasterRepository.Add(banner);
+                        return;
                     }
                     else
                     {
-                        var databyid = _iBannerMasterRepository.SelectById(passedId);
-                        if (databyid != null)
-                        {
-                            databyid.bannerHeader = txtBannerHead.Text.Trim().ToString();
-                            databyid.bannerDesc = txtDesc.Text.Trim().ToString();
-                            databyid.bannerImg = Image;
-                            databyid.udate = DateTime.Now;
+                        Label1.Visible = false;
 
-                            _iBannerMasterRepository.Update(databyid);
+                        if (btnSubmit.Text == "Submit")
+                        {
+
+                            banner_master banner = new banner_master();
+                            banner.bannerHeader = txtBannerHead.Text.Trim().ToString();
+                            banner.bannerDesc = txtDesc.Text.Trim().ToString();
+                            banner.bannerImg = Image;
+                            banner.cdate = DateTime.Now;
+
+                            _iBannerMasterRepository.Add(banner);
                         }
+                        else
+                        {
+                            passedId = Convert.ToInt32(Request.QueryString["id"].ToString());
+                            var databyid = _iBannerMasterRepository.SelectById(passedId);
+                            if (databyid != null)
+                            {
+                                databyid.bannerHeader = txtBannerHead.Text.Trim().ToString();
+                                databyid.bannerDesc = txtDesc.Text.Trim().ToString();
+                                databyid.bannerImg = Image;
+                                databyid.udate = DateTime.Now;
+
+                                _iBannerMasterRepository.Update(databyid);
+                            }
+                        }
+                        Response.Redirect("MainBannerLst.aspx");
                     }
-                    Response.Redirect("MainBannerLst.aspx");
                 }
+            }
+            catch (Exception x)
+            {
+                Response.Write("<script>alert('" + x.ToString() + "')</script>");
             }
         }
 

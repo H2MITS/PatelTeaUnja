@@ -173,10 +173,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\NewUserRegister.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\offerScheme.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ProductPrice.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\product_master.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\userLogin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -188,10 +197,16 @@
     <Compile Include="Repository\ContactMasterRepo\IContactMasterRepository.cs" />
     <Compile Include="Repository\DistributerMasterRepo\DistributerMasterRepository.cs" />
     <Compile Include="Repository\DistributerMasterRepo\IDistributerMasterRepository.cs" />
+    <Compile Include="Repository\NewUserRegisterRepo\INewUserRegisterRepository.cs" />
+    <Compile Include="Repository\NewUserRegisterRepo\NewUserRegisterRepository.cs" />
     <Compile Include="Repository\OfferSchemeRepo\IOfferSchemeRepository.cs" />
     <Compile Include="Repository\OfferSchemeRepo\OfferSchemeRepository.cs" />
     <Compile Include="Repository\ProductMasterRepo\IProductMasterRepository.cs" />
     <Compile Include="Repository\ProductMasterRepo\ProductMasterRepository.cs" />
+    <Compile Include="Repository\ProductPriceRepo\IProductPriceRepository.cs" />
+    <Compile Include="Repository\ProductPriceRepo\ProductPriceRepository.cs" />
+    <Compile Include="Repository\UserLoginRepo\IUserLoginRepository.cs" />
+    <Compile Include="Repository\UserLoginRepo\UserLoginRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

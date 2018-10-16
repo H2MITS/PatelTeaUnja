@@ -18,13 +18,14 @@ namespace PatelTeaSource.Data.Model
         public product_master()
         {
             this.offerSchemes = new HashSet<offerScheme>();
+            this.ProductPrices = new HashSet<ProductPrice>();
         }
     
         public long p_id { get; set; }
         public string pname { get; set; }
         public string photo { get; set; }
         public string description { get; set; }
-        public Nullable<int> weight { get; set; }
+        public Nullable<decimal> weight { get; set; }
         public string unit { get; set; }
         public string nutritionImg { get; set; }
         public Nullable<System.DateTime> cDate { get; set; }
@@ -32,5 +33,7 @@ namespace PatelTeaSource.Data.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<offerScheme> offerSchemes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductPrice> ProductPrices { get; set; }
     }
 }

@@ -1,5 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ClientSide/Client.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="PatelTeaSource.ClientSide.Default" %>
 
+<asp:Content ID="Content5" ContentPlaceHolderID="menu" runat="server">
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li id="li_Home" class="active"><a href="Default.aspx">Home</a></li>
+            <li id="li_Abt"><a href="AboutUs.aspx" onclick="makeChange(2)" id="abt">About</a></li>
+            <li id="li_Products"><a href="Products.aspx" onclick="makeChange(3)">Products</a></li>
+             <li id="li_Awards" ><a href="AwardsCertificate.aspx" onclick="makeChange(5)">Awards</a></li>
+
+            <li id="li_ContactUs"><a href="Contactus.aspx" onclick="makeChange(6)">Contact Us</a></li>
+            <li id="li_WhereToBuy"><a href="WhereToBuy.aspx" onclick="makeChange(7)">Locate Us</a></li>
+        </ul>
+    </div>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .myButton:hover {
@@ -41,7 +55,7 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="banner" runat="server">
     <!-- Banner -->
     <div id="banner">
         <div class="slider-wrapper">
@@ -113,7 +127,7 @@
         </div>
     </div>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <section id="infoUs" class="section infoUs"
         style="background-image: url(../Template/images/paralax-right.png); background-position: right center; background-repeat: no-repeat;">
         <div class="container">
@@ -321,211 +335,7 @@
 
     </section>--%>
 
-    <%---------------------------------------------------------------------------------------------------------%>
-
-
-			 <div class="page-content">
-				<div id="galleries" class="galleries galleries-v1">
-					<div class="container">
-						<div id="filter" class="filter">
-							<button class="button active" data-filter="*">All</button>
-							<button class="button" data-filter=".coffee">Coffee</button>
-							<button class="button" data-filter=".cocktail">Cocktail</button>
-							<button class="button" data-filter=".tea">Tea</button>
-							<button class="button" data-filter=".milk">Milk</button>
-							<button class="button" data-filter=".beverages">Beverages</button>
-						</div>
-						<div class="row">
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee milk tea">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../Template/images/galleries/img-1.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../Template/ajax/gallery-v1-1.html"></a>
-											<div class="gallery-icon">
-												<%--<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>--%>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Consectetur adipiscing elit</a></h4>
-								</div>
-							</div>
-							
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail tea beverages">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-2.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Justo euismod faucibs eleifend</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee tea milk">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-3.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Inventore veritatis quasi</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee milk tea beverages">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-4.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Voluptatem sequi nesciun</a></h4>
-								</div>
-							</div>
-							
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail tea beverages">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-5.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Justo euismod faucibs eleifend</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail tea milk">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-6.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Perspiciatis unde omnis</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee tea beverages">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-7.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Omnis iste natus error</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail milk beverages">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-8.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Eaque ipsa quae</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee tea">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-9.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Quasi architecto beatae</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail milk beverages">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-10.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Magni dolores eos</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item coffee tea beverages">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-11.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-1.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-1.html">Aspernatur aut odit aut</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6 col-xs-6 gallery-item cocktail milk tea beverages">
-								<div class="inner">
-									<figure>
-										<img alt="" src="../images/galleries/img-12.jpg">
-										<figcaption>
-											<a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html"></a>
-											<div class="gallery-icon">
-												<a href="#" class="hvr-rectangle-out"><i class="fa">&#xf002;</i></a>
-												<a href="#" class="hvr-rectangle-out gallery-ajax" data-url="../ajax/gallery-v1-2.html"><i class="fa">&#xf0c1;</i></a>
-											</div>
-										</figcaption>
-									</figure>
-									<h4 class="title"><a class="gallery-ajax" href="#" data-url="../ajax/gallery-v1-2.html">Ratione voluptatem</a></h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-    <%----------------------------------------------------------------------------------------------------------------%>
-
+  
 
     <section id="latest" class="section bulletproof" style="padding: 25px 0 50px !important";>
 
@@ -780,3 +590,5 @@
 				</div>
 			</section>
 </asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="footers" runat="server"></asp:Content>

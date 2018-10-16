@@ -58,13 +58,13 @@ namespace PatelTeaSource.AdminSide.Forms {
         protected global::System.Web.UI.WebControls.TextBox txtDesc;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtWeight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtWeight;
         
         /// <summary>
         /// drpUnit control.
@@ -101,6 +101,15 @@ namespace PatelTeaSource.AdminSide.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
+        
+        /// <summary>
+        /// txtPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPrice;
         
         /// <summary>
         /// btnSubmit control.

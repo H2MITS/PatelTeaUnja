@@ -12,8 +12,13 @@
         <EntityTypeShape EntityType="patelteaModel.feedback_master" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="patelteaModel.awardsCertificate" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="patelteaModel.offerScheme" Width="1.5" PointX="7.625" PointY="5.25" />
-        <EntityTypeShape EntityType="patelteaModel.product_master" Width="1.5" PointX="5.375" PointY="5" />
+        <EntityTypeShape EntityType="patelteaModel.NewUserRegister" Width="1.5" PointX="0.75" PointY="9" />
+        <EntityTypeShape EntityType="patelteaModel.userLogin" Width="1.5" PointX="3" PointY="9.5" />
+        <AssociationConnector Association="patelteaModel.FK_userLogin_NewUserRegister" />
+        <EntityTypeShape EntityType="patelteaModel.ProductPrice" Width="1.5" PointX="7.625" PointY="8.5" />
+        <EntityTypeShape EntityType="patelteaModel.product_master" Width="1.5" PointX="5.375" PointY="6.375" />
         <AssociationConnector Association="patelteaModel.FK_offerScheme_product_master" />
+        <AssociationConnector Association="patelteaModel.FK_ProductPrice_product_master" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -47,7 +47,7 @@
 
                                             <div class="form-group">
                                                 <label for="complaintinput1">Product Name:</label>
-                                                <asp:TextBox ID="txtProductName" Height="30" CssClass="form-control round" placeholder="Product Name" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtProductName" Height="30" CssClass="form-control" placeholder="Product Name" runat="server" required></asp:TextBox>
 
                                             </div>
                                             <div class="form-group">
@@ -63,39 +63,47 @@
                                             <div class="form-group">
                                                 <label for="complaintinput2">Product Description:</label>
 
-                                                <asp:TextBox ID="txtDesc" CssClass="form-control round" Rows="5" placeholder="description" TextMode="MultiLine" Columns="5" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDesc" CssClass="form-control" Rows="5" placeholder="description" TextMode="MultiLine" Columns="5" runat="server" required></asp:TextBox>
                                             </div>
 
                                             <div class="row">
                                                 <div class="col-md-4 col-4">
                                                     <div class="form-group">
                                                         <label for="complaintinput1">Weight:</label>
-                                                        <asp:TextBox ID="TextBox1" Height="30" CssClass="form-control round" placeholder="Banner Header" runat="server"></asp:TextBox>
+                                                        <asp:TextBox ID="txtWeight" Height="30" CssClass="form-control" placeholder="Banner Header" runat="server" required></asp:TextBox>
 
                                                     </div>
 
                                                 </div>
                                                 <div class="col-md-2 col-2">
                                                     <label for="complaintinput1">Unit</label>
-                                                    <asp:DropDownList ID="drpUnit" CssClass="form-control round" runat="server">
+                                                    <asp:DropDownList ID="drpUnit" CssClass="form-control" runat="server">
                                                         <asp:ListItem>--Select--</asp:ListItem>
                                                         <asp:ListItem>Gram</asp:ListItem>
                                                         <asp:ListItem>Kg</asp:ListItem>
                                                     </asp:DropDownList>
                                                 </div>
-                                            </div> 
+                                            </div>
                                             <div class="form-group">
 
                                                 <label for="complaintinput3">Upload Nutrition Image (1920x675):</label>
 
-                                                <asp:FileUpload ID="FileUpload2" runat="server" />
+                                                <asp:FileUpload ID="FileUpload2" runat="server" required />
                                                 <br />
                                                 <asp:Label ID="Label3" runat="server"></asp:Label>
                                                 <asp:Label ID="Label4" runat="server"></asp:Label>
 
                                             </div>
 
+
+                                            <div class="form-group">
+                                                <label for="complaintinput1">Price:</label>
+                                                <asp:TextBox ID="txtPrice" Height="30" CssClass="form-control" placeholder="0.00" runat="server" required></asp:TextBox>
+
+                                            </div>
+
                                         </div>
+
 
                                         <div class="form-actions">
 

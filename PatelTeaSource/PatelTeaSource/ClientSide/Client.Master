@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Patel Tea Packers</title>
-  
-      <link rel="shortcut icon" type="image/png" href="../../Template/images/green-tea-leaf-png-3.png" />
+
+    <link rel="shortcut icon" type="image/png" href="../../Template/images/green-tea-leaf-png-3.png" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" rel="stylesheet"
@@ -59,60 +59,12 @@
                                     </button>
                                     <h3 class="navbar-brand">Menu</h3>
                                 </div>
-                                <div id="navbar" class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav">
-                                        <li id="li_Home" class="active"><a href="Default.aspx" onclick="makeChange(1)">Home</a></li>
-                                        <li id="li_Abt"><a href="AboutUs.aspx" onclick="makeChange(2)" id="abt">About</a></li>
-                                        <li id="li_Products"><a href="../CommingSoonTemp/index.html" onclick="makeChange(3)">Products</a></li>
-                                        <li id="li_Quality"><a href="../CommingSoonTemp/index.html" onclick="makeChange(4)">Quality</a></li>
-                                        <li id="li_Awards"><a href="../CommingSoonTemp/index.html" onclick="makeChange(5)">Awards</a></li>
-                                        <%--<li><a href="menu.html">Menu</a>
-                                        <div class="mega-menu">
-                                            <div class="mega-menu-inner">
-                                                <div class="mega-cols">
-                                                    <ul class="sub-menu">
-                                                        <li><a href="menu.html#coffee">Coffee</a> </li>
-                                                        <li><a href="menu.html#milk">Milk</a> </li>
-                                                        <li><a href="menu.html#cocktail">Cocktail</a> </li>
-                                                        <li><a href="menu.html#beverages">Beverages</a> </li>
-                                                        <li><a href="menu.html#tea">Tea</a> </li>
-                                                        <li><a href="menu.html#cake">Cake</a> </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="mega-cols">
-                                                    <div class="mega-text">
-                                                        <figure>
-                                                            <img alt="" src="../Template/images/mega-menu/mega-menu.jpg" />
-                                                            <figcaption>Classical Latin literature from 45 BC, making...</figcaption>
-                                                        </figure>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a href="galleries-v1.html">Galleries</a>
-                                        <div class="dropdown">
-                                            <ul class="sub-menu">
-                                                <li><a href="galleries-v3.html">Galleries 2 Cols</a> </li>
-                                                <li><a href="galleries-v1.html">Galleries 3 Cols (Single Expanding)</a> </li>
-                                                <li><a href="galleries-v2.html">Galleries 4 Cols (Single Popup)</a> </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li><a href="blog-v1.html">News &amp; Events</a>
-                                        <div class="dropdown">
-                                            <ul class="sub-menu">
-                                                <li><a href="blog-v1.html">Blog standard</a> </li>
-                                                <li><a href="blog-v2.html">Blog Left Sidebar</a> </li>
-                                                <li><a href="blog-v3.html">Blog Right Sidebar</a>  </li>
-                                                <li><a href="post.html">Single</a> </li>
-                                            </ul>
-                                        </div>
-                                    </li>--%>
-                                        <li id="li_ContactUs"><a href="Contactus.aspx" onclick="makeChange(6)">Contacts Us</a></li>
-                                        <li id="li_WhereToBuy"><a href="../CommingSoonTemp/index.html" onclick="makeChange(7)">Where to buy</a></li>
-                                    </ul>
+                                <div>
+                                    <asp:ContentPlaceHolder ID="menu" runat="server">
+                                    </asp:ContentPlaceHolder>
                                 </div>
+
+                              
                                 <!--/.navbar-collapse -->
                             </div>
                         </nav>
@@ -128,7 +80,7 @@
                 </div>
 
                 <div>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    <asp:ContentPlaceHolder ID="banner" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
 
@@ -139,7 +91,7 @@
             <div id="main-content" class="main-content">
 
                 <div>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <asp:ContentPlaceHolder ID="main" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
 
@@ -193,7 +145,7 @@
                                             </p>
                                             <p>
                                                 <button class="hvr-shutter-out-horizontal">Subscribe</button>
-                                              
+
                                             </p>
                                         </form>
                                     </div>
@@ -219,15 +171,15 @@
                 </div>
                 <div class="copyright">
                     <div class="container">
-                        <div class="col-md-12" style="width:100%">
+                        <div class="col-md-12" style="width: 100%">
                             <div class="row">
-                                <div class="col-md-6" style="text-align:left;padding-left:1px !important;padding-right:4px !important">
+                                <div class="col-md-6" style="text-align: left; padding-left: 1px !important; padding-right: 4px !important">
                                     <p>
                                         Copyright &copy; 2018 <a href="http://pateltea.co.in">Patel Tea Packers</a>. All Rights Reserved.
                                     </p>
 
                                 </div>
-                                <div class="col-md-6" style="text-align:right;padding-left:13px">
+                                <div class="col-md-6" style="text-align: right; padding-left: 13px">
 
                                     <p>
                                         Developed By <a href="http://www.h2mSolution.com">H2M Solution</a>.
@@ -243,6 +195,12 @@
 
         </div>
     </form>
+
+
+    <div>
+        <asp:ContentPlaceHolder ID="footers" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
 
     <script src="../Template/assets/js/vendor/jquery-1.11.2.min.js"></script>
     <script src="../Template/assets/js/vendor/imagesloaded.pkgd.min.js"></script>
@@ -261,10 +219,10 @@
 
 <script>
     $("#anchorTag").click(function () {
-        
+
     });
 
-
+    
     function makeChange(ancType) {
         if (ancType == 1) {
             $("#li_Home").addClass("active");
@@ -331,7 +289,7 @@
             $("#li_WhereToBuy").addClass("active");
         }
 
-      //  $(this).css('active');
+        //  $(this).css('active');
     }
 
 </script>

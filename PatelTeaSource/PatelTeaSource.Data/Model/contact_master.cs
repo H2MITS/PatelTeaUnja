@@ -21,5 +21,8 @@ namespace PatelTeaSource.Data.Model
         public string subject { get; set; }
         public Nullable<System.DateTime> cdate { get; set; }
         public Nullable<System.DateTime> udate { get; set; }
+        public string message { get; set; }
+        public string reply { get; set; }
+        public Nullable<int> status { get; set; }
     }
 }

@@ -8,6 +8,8 @@ using PatelTeaSource.Data.Model;
 using PatelTeaSource.Domain.ViewModel;
 using PatelTeaSource.Data.Repository.ContactMasterRepo;
 using System.Net.Mail;
+using System.Net;
+using PatelTeaSource.Domain.Classes;
 
 namespace PatelTeaSource.ClientSide
 {
@@ -35,33 +37,31 @@ namespace PatelTeaSource.ClientSide
 
         protected void submits_Click(object sender, EventArgs e)
         {
+            MailClass sendm = new MailClass();
+            sendm.sendMails(txtEmail.Text.Trim().ToString(), "For Contacting Patel Tea Packers", "Thanks for showing your interest in Patel Tea Packers. One of our team memeber will contact you soon.");
+            addToContact();
             AfterSendMail.Visible = true;
             sendMail.Visible = false;
         }
-
-        public void sendmail()
+         
+        public void addToContact()
         {
-
             try
             {
-                MailMessage mail = new MailMessage();
-                SmtpClient smtpserver = new SmtpClient(); //stmp.gmail.com
-                smtpserver.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
-                smtpserver.Port = 587;
-                mail.From = new MailAddress("hvirus777@gmail.com");
-                mail.To.Add(txtName.Text);
-                mail.Subject = txtSub.Text;
-                mail.Body = txtMessage.Text;
-                //smtpserver.Port = 0;
-                smtpserver.Credentials = new System.Net.NetworkCredential("hvirus777@gmail.com", "Hs9898464496Hs");
-                smtpserver.EnableSsl = true;
-                smtpserver.Send(mail); 
-            }
-            catch (Exception ex)
-            {
-                Response.Write("alert('" + ex + "')");
-            }
+                contact_master contact = new contact_master();
+                contact.fname = txtName.Text.Trim().ToString();
+                contact.email = txtEmail.Text.Trim().ToString();
+                contact.subject = txtSub.Text.Trim().ToString();
+                contact.message = txtMessage.Text.Trim().ToString();
+                contact.cdate = DateTime.Now;
+                contact.status = 0;
+                _IContactMasterRepository.Add(contact);
 
+            }
+            catch(Exception x)
+            {
+
+            }
         }
     }
 }

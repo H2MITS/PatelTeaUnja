@@ -47,7 +47,7 @@
                                         <div class="form-body">
                                             <div class="form-group">
                                                 <label for="complaintinput1">Awards &Certi. Description :</label>
-                                                <asp:TextBox ID="txtDesc" CssClass="form-control round" Rows="5" placeholder="description" TextMode="MultiLine" Columns="5" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDesc" CssClass="form-control" Rows="5" placeholder="description" TextMode="MultiLine" Columns="5" runat="server" required></asp:TextBox>
 
                                             </div>
 
@@ -55,7 +55,7 @@
 
                                                 <label for="complaintinput3">Upload Award (380x234):</label>
 
-                                                <asp:FileUpload ID="FileUpload1" runat="server" />
+                                                <asp:FileUpload ID="FileUpload1" runat="server" required/>
                                                 <br />
                                                 <asp:Label ID="Label1" runat="server"></asp:Label>
                                                 <asp:Label ID="Label2" runat="server"></asp:Label>
@@ -64,7 +64,7 @@
 
                                             <div class="form-group">
                                                 <label for="complaintinput1">Year :</label>
-                                               <i class="icon-calendar5"></i> <asp:TextBox ID="txtYear" CssClass="form-control round" placeholder="description" TextMode="Date" Columns="5" runat="server"></asp:TextBox>
+                                               <i class="icon-calendar5"></i> <asp:TextBox ID="txtYear" CssClass="form-control" placeholder="description" TextMode="Date" Columns="5" runat="server" required></asp:TextBox>
                                                  
                                             </div>
 

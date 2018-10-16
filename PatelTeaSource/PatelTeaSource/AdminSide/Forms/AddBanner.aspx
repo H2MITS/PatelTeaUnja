@@ -57,21 +57,21 @@
 
                                             <div class="form-group">
                                                 <label for="complaintinput1">Banner Header:</label>
-                                                <asp:TextBox ID="txtBannerHead" Height="30" CssClass="form-control round" placeholder="Banner Header" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtBannerHead" Height="30" CssClass="form-control" placeholder="Banner Header" runat="server" required></asp:TextBox>
 
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="complaintinput2">Header Description:</label>
 
-                                                <asp:TextBox ID="txtDesc" CssClass="form-control round" Rows="5" placeholder="description" TextMode="MultiLine" Columns="5" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtDesc" CssClass="form-control" Rows="5" placeholder="description" TextMode="MultiLine" Columns="5" runat="server" required></asp:TextBox>
                                             </div>
 
                                             <div class="form-group">
 
                                                 <label for="complaintinput3">Upload Banner (1920x675):</label>
 
-                                                <asp:FileUpload ID="FileUpload1" runat="server" />
+                                                <asp:FileUpload ID="FileUpload1" runat="server" required/>
                                                 <br />
                                                 <asp:Label ID="Label1" runat="server"></asp:Label>
                                                 <asp:Label ID="Label2" runat="server"></asp:Label>
